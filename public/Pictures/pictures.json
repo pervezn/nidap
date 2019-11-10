@@ -1,0 +1,14 @@
+{
+    "mahitoPic": {
+        "id": 1,
+        "img": "./Pictures/mahitoPic.JPG"
+    },
+    "nidpic": {
+        "id":2,
+        "img": "./Pictures/nidpic.JPG"
+    },
+    "Pic3": {
+        "id":3,
+        "img": "./Pictures/Pic3.png"
+    }
+}
