@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+
+* {
+  /* border: solid 1px black; */
+  box-sizing: border-box !important;
+}
+
 .App-logo {
   height: 40vmin;
 }
