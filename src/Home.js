@@ -26,6 +26,10 @@ const useStyles = makeStyles({
   paper1: {
     height:"100vh",
     width: "37vw",
+    // background: "#55769A",
+    // position: "-webkit-sticky", 
+    // position: "sticky", 
+    // top: "0"
   },
   paper2: {
     height:"100vh",
@@ -44,7 +48,7 @@ const useStyles = makeStyles({
     height:"65vh",
     width: "27vw",
     // background: "#55769A",
-    marginTop: "10vw", 
+    paddingTop: "10vw", 
     marginLeft: "10vw",
     display: "sticky",
     textAlign: "left",
@@ -96,7 +100,7 @@ const Home = ()  => {
         <Paper elevation={0} square className={classes.paper0}></Paper>
         <Grid item>
           <Paper elevation={0} className={[classes.paper1, classes.paperMaster]}>
-            <Paper elevation={0} className={classes.paper4}>
+            <Paper elevation={0} className={classes.paper4} style={{position: "-webkit-sticky", position: "sticky", top: "0"}}>
               <Button className={classes.button1}>
                 <Link style={{color: "#49BEAA", textDecoration: "none"}} to="/">Home</Link>
               </Button>
