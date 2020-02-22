@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 import { Paper, Image, Avatar, Typography, Box, Grid, GridListTile, GridList, Button, Card, CardMedia } from '@material-ui/core';
-import { borders } from '@material-ui/system';
+// import { borders } from '@material-ui/system';
 import { makeStyles } from '@material-ui/styles';
 import { typeAlias } from '@babel/types';
 import {Route, Link} from 'react-router-dom';
@@ -24,16 +24,20 @@ const useStyles = makeStyles({
     background: "#55769A",
   },
   paper1: {
-    height:"100vh",
-    width: "37vw",
+    height:"100%",
+    width: "40vw",
+    borderLeft: "25px solid #55769A",
+    borderRadius: "0px",
     // background: "#55769A",
     // position: "-webkit-sticky", 
     // position: "sticky", 
     // top: "0"
   },
   paper2: {
-    height:"100vh",
+    // height:"100vh",
     width: "60vw",
+    height: "100%",
+    // width: "2%",
   },
   paper3: {
     height:"40vh",
@@ -62,7 +66,8 @@ const useStyles = makeStyles({
   paper6:{
     // height:"65vh",
     width: "40vw",
-    height: "40vh",
+    height: "100%",
+    // border: "1px solid hotpink",
     // background: "#55769A"
   },
   button1: {
@@ -96,8 +101,7 @@ const Home = ()  => {
     }, []);
   
     return (
-      <Grid container>
-        <Paper elevation={0} square className={classes.paper0}></Paper>
+      <Grid container >
         <Grid item>
           <Paper elevation={0} className={[classes.paper1, classes.paperMaster]}>
             <Paper elevation={0} className={classes.paper4} style={{position: "-webkit-sticky", position: "sticky", top: "0"}}>
@@ -116,37 +120,43 @@ const Home = ()  => {
         </Grid>
         <Grid item>
           <Paper elevation={0} className={[classes.paper2, classes.paperMaster]}>
+          <Link style={{textDecoration: "none"}} to="/projects/factflow">
             <Button className={classes.button2} style={{marginTop: "10vw"}}>
-              <Paper elevation={0} className={classes.paper3}>
-                <Paper elevation={0} className={classes.paper5}>
-                  <Typography variant="h5" style={{textAlign: "left", margin:"1vw", color:"#EF767A"}}>Trope Tracker</Typography>
-                </Paper>  
-                <Paper elevation={0} className={classes.paper6}>
-                  <img src={"../Pictures/TropeTracker.png"} style={{height:"40vh", alignContent:"right"}}/>
-                </Paper>
-              </Paper>
-            </Button>
-            <Button className={classes.button2}>
               <Paper elevation={0} className={classes.paper3}>
                 <Paper elevation={0} className={classes.paper5}>
                   <Typography variant="h5" style={{textAlign: "left", margin:"1vw", color:"#EF767A"}}>Fact Flow</Typography>
                 </Paper>  
                 <Paper elevation={0} className={classes.paper6}>
-                  <img src={"../Pictures/FactFlow.png"} style={{height:"40vh",  alignContent:"right"}}/>
+                  <img src={"../Pictures/FactFlow.png"} style={{height:"100%",  alignContent:"right"}}/>
                 </Paper>
               </Paper>
             </Button>
+          </Link>
+          <Link style={{textDecoration: "none"}} to="/projects/tropetracker">
+            <Button className={classes.button2}>
+              <Paper elevation={0} className={classes.paper3}>
+                <Paper elevation={0} className={classes.paper5}>
+                  <Typography variant="h5" style={{textAlign: "left", margin:"1vw", color:"#EF767A"}}>Trope Tracker</Typography>
+                </Paper>  
+                <Paper elevation={0} className={classes.paper6}>
+                  <img src={"../Pictures/TropeTracker.png"} style={{height:"100%", alignContent:"right"}}/>
+                </Paper>
+              </Paper>
+            </Button>
+          </Link>
+          <Link style={{textDecoration: "none"}} to="/projects/internships">
             <Button className={classes.button2}>
               <Paper elevation={0} className={classes.paper3}>
                 <Paper elevation={0} className={classes.paper5}>
                   <Typography  style={{textAlign: "left", margin:"1vw", color:"#EF767A"}}>Past Internships</Typography>
                 </Paper>  
                 <Paper elevation={0} className={classes.paper6}>
-                  <img src={"../Pictures/Allstate.png"} style={{width:"20vh", alignContent:"right"}}/>
-                  <img src={"../Pictures/Apple.png"} style={{width:"20vh", marginTop:"5vw", marginLeft:"5vw", alignContent:"right"}}/>
+                  {/* <img src={"../Pictures/Allstate.png"} style={{height:"100%", alignContent:"right"}}/> */}
+                  <img src={"../Pictures/Apple.png"} style={{height:"100%",marginLeft:"5vw", alignContent:"right"}}/>
                 </Paper>
               </Paper>
             </Button>
+          </Link>
           </Paper>
         </Grid>
       </Grid>

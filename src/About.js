@@ -19,11 +19,16 @@ const useStyles = makeStyles({
       background: "#55769A",
     },
     paper1: {
-      height:"80vh",
-      width: "37vw",
-      position: "-webkit-sticky", 
-      position: "sticky", 
-      top: "0"
+      height:"100%",
+      width: "40vw",
+      borderLeft: "25px solid #55769A",
+      borderRadius: "0px",
+      // backgroundColor: "blue",
+      // height:"80vh",
+      // width: "37vw",
+      // position: "-webkit-sticky", 
+      // position: "sticky", 
+      // top: "0"
     },
     paper2: {
       height:"80vh",
@@ -81,8 +86,9 @@ const About = ()  => {
     const classes = useStyles();
     return (
       <div className="About">
-        <Grid container>
-            <Paper elevation={0} square className={classes.paper0}></Paper>
+        <Grid container >
+        {/* style={{backgroundColor: "purple"}} */}
+            {/* <Paper elevation={0} square className={classes.paper0}></Paper> */}
             <Grid item>
             <Paper elevation={0} className={[classes.paper1, classes.paperMaster]}>
                 <Paper elevation={0} className={classes.paper4} style={{position: "-webkit-sticky", position: "sticky", top: "0"}}>

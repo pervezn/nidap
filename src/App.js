@@ -6,7 +6,10 @@ import { borders } from '@material-ui/system';
 import { makeStyles } from '@material-ui/styles';
 import { typeAlias } from '@babel/types';
 import Home from "./Home";
-import About from "./About"
+import About from "./About";
+import FactFlow from "./FactFlow";
+import TropeTracker from "./TropeTracker";
+import Internships from "./Internships"
 import {Route, Link} from 'react-router-dom';
 
 const defaultProps = {
@@ -15,24 +18,15 @@ const defaultProps = {
 
 
 const App = ()  => {
-  // const [data, setData] = useState({});
-  // const pictures = Object.values(data);
-
-
-  // useEffect(() => {
-  //   const fetchProducts = async () => {
-  //     const response = await fetch('./pictures/pictures.json');
-  //     const json = await response.json();
-  //     setData(json);
-  //   };
-  //   fetchProducts();
-  // }, []);
 
   return (
     <div className="App">
       <Route exact path="/" component={Home} />
       <Route exact path="/home" component={Home} />
       <Route exact path="/about" component={About} />
+      <Route exact path="/projects/factflow" component={FactFlow} />
+      <Route exact path="/projects/tropetracker" component={TropeTracker} />
+      <Route exact path="/projects/internships" component={Internships} />
     </div>
     
   );
