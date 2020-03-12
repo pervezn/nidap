@@ -111,12 +111,12 @@ const About = ()  => {
            </Grid>
  
            <Paper elevation={0} style={{display: "inline-block", width: "100%", marginTop: "5vh"}}>
-             <div style={{float: "right", width: "50%"}}>
-             <Button style={{color: "#55769A"}}>LinkedIn</Button>
-             <Button style={{color: "#55769A"}}>Email</Button>
-             <Button style={{color: "#55769A"}}>Github</Button>
-             <Button><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand">Lala-Land</Link></Button>
-           </div>
+           <div style={{float: "right", width: "50%"}}>
+            <Button onClick={() => {window.open('https://www.linkedin.com/in/nida-pervez-956a20149/')}} style={{color: "#55769A"}}>LinkedIn</Button>
+            <Button style={{color: "#55769A"}}>Email</Button>
+            <Button onClick={() => {window.open('https://github.com/pervezn')}} style={{color: "#55769A"}}>Github</Button>
+            <Button><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand">Lala-Land</Link></Button>
+          </div>
          </Paper>
        </Grid>
       

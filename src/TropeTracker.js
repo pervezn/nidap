@@ -96,9 +96,9 @@ const TropeTracker = ()  => {
               <Button className={classes.button1}>  <Link style={{color: "#49BEAA", textDecoration: "none"}} to="/about">About</Link></Button>
               <Button className={classes.button1}>Resume</Button>
               <Button className={classes.button1}>Projects</Button>
-              <Button className={classes.button2}><Link style={{textDecoration: "none"}} to="/projects/factflow">Fact Flow</Link></Button>
+              <Button className={classes.button2}><Link style={{color: "#49BEAA", textDecoration: "none"}} to="/projects/factflow">Fact Flow</Link></Button>
               <Button className={classes.button2} style={{color: "#EEB868"}}>Trope Tracker</Button>
-              <Button className={classes.button2}><Link style={{textDecoration: "none"}} to="/projects/internships">Internships</Link></Button>
+              <Button className={classes.button2}><Link style={{color: "#49BEAA", textDecoration: "none"}} to="/projects/internships">Internships</Link></Button>
               {/* <Button className={classes.button2}>Allstate</Button> */}
             </Paper>
           </Paper>
@@ -137,11 +137,11 @@ const TropeTracker = ()  => {
       </Grid>
       <Paper elevation={0} style={{display: "inline-block", width: "100%", borderLeft: "25px solid #55769A",borderRadius: "0"}}>
         <div style={{float: "right", width: "50%"}}>
-          <Button style={{color: "#55769A"}}>LinkedIn</Button>
-          <Button style={{color: "#55769A"}}>Email</Button>
-          <Button style={{color: "#55769A"}}>Github</Button>
-          <Button><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand">Lala-Land</Link></Button>
-        </div>
+         <Button onClick={() => {window.open('https://www.linkedin.com/in/nida-pervez-956a20149/')}} style={{color: "#55769A"}}>LinkedIn</Button>
+         <Button style={{color: "#55769A"}}>Email</Button>
+         <Button onClick={() => {window.open('https://github.com/pervezn')}} style={{color: "#55769A"}}>Github</Button>
+         <Button><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand">Lala-Land</Link></Button>
+       </div>
       </Paper>
         
       </div>

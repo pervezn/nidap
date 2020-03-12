@@ -73,12 +73,12 @@ const Movies = ()  => {
             </Grid>
             
         </Grid>
-        <div style={{display: "inline-block", alignContent:"center", marginTop: "5vh", width: "100%"}}>
-                        <Button style={{color: "#EF767A"}}>LinkedIn</Button>
-                        <Button style={{color: "#EF767A"}}>Email</Button>
-                        <Button style={{color: "#EF767A"}}>Github</Button>
-                        <Button ><Link style={{color: "#EF767A", textDecoration: "none"}} to="/Home">Exit Lala-Land</Link></Button>
-                    </div>
+        <div style={{display: "inline-block", bottom: "0", alignContent:"center", marginTop: "5vh"}}>
+           <Button onClick={() => {window.open('https://www.linkedin.com/in/nida-pervez-956a20149/')}} style={{color: "#EF767A"}}>LinkedIn</Button>
+           <Button style={{color: "#EF767A"}}>Email</Button>
+           <Button onClick={() => {window.open('https://github.com/pervezn')}} style={{color: "#EF767A"}}>Github</Button>
+           <Button ><Link style={{color: "#EF767A", textDecoration: "none"}} to="/Home">Exit Lala-Land</Link></Button>
+       </div>
         {/* ^^In the middle of the page??? */}
       </div>
       
