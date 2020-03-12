@@ -22,7 +22,7 @@ const useStyles = makeStyles({
     // height:"100%",
     height: "100vh",
     width: "30vw",
-    borderLeft: "25px solid #55769A",
+    
     borderRadius: "0px",
     // background: "lightblue",
     // position: "-webkit-sticky", 
@@ -87,7 +87,8 @@ const TropeTracker = ()  => {
   
   
     return (
-      <Grid container >
+      <div className="TropeTracker">
+      <Grid container style={{borderLeft: "25px solid #55769A",}}>
         <Grid item>
           <Paper elevation={0} className={[classes.paper1, classes.paperMaster]}>
             <Paper elevation={0} className={classes.paper2} style={{position: "-webkit-sticky", position: "sticky", top: "0"}}>
@@ -134,6 +135,16 @@ const TropeTracker = ()  => {
           </Paper>
         </Grid>
       </Grid>
+      <Paper elevation={0} style={{display: "inline-block", width: "100%", borderLeft: "25px solid #55769A",borderRadius: "0"}}>
+        <div style={{float: "right", width: "50%"}}>
+          <Button style={{color: "#55769A"}}>LinkedIn</Button>
+          <Button style={{color: "#55769A"}}>Email</Button>
+          <Button style={{color: "#55769A"}}>Github</Button>
+          <Button><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand">Lala-Land</Link></Button>
+        </div>
+      </Paper>
+        
+      </div>
     );
   };
 
@@ -141,4 +152,3 @@ const TropeTracker = ()  => {
 
   
   export default TropeTracker;
-  
