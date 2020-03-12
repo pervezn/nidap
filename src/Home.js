@@ -101,6 +101,7 @@ const Home = ()  => {
     }, []);
   
     return (
+      // <div className="Home">
       <Grid container >
         <Grid item>
           <Paper elevation={0} className={[classes.paper1, classes.paperMaster]}>
@@ -159,9 +160,16 @@ const Home = ()  => {
           </Link>
           </Paper>
         </Grid>
+        <Paper elevation={0} style={{display: "inline-block", width: "100%", borderLeft: "25px solid #55769A", borderRadius: "0px",}}>
+          <div style={{float: "right", width: "50%"}}>
+          <Button style={{color: "#55769A"}}>LinkedIn</Button>
+          <Button style={{color: "#55769A"}}>Email</Button>
+          <Button style={{color: "#55769A"}}>Github</Button>
+          <Button><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand">Lala-Land</Link></Button>
+          </div>
+        </Paper>
       </Grid>
     );
   };
   
   export default Home;
-  
