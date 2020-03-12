@@ -53,8 +53,8 @@ const Travel = ()  => {
                </Paper>
            </Grid>
            <Grid item>
-               <Paper elevation={0} className={classes.paper1}>
-                   <Typography variant="h5" style={{color: "#EEB868", marginTop: "3vh"}} style={{top: "0"}}>Nida Pervez</Typography>
+               <Paper elevation={0} className={classes.paper1} style={{ top: "0"}}>
+                   <Typography variant="h5" style={{color: "#EEB868", marginTop: "3vh"}}>Nida Pervez</Typography>
                    <Button> <Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/"><Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1}/></Link></Button>
                </Paper>
            </Grid>
