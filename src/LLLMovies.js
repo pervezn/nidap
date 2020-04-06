@@ -5,6 +5,32 @@ import { makeStyles } from '@material-ui/styles';
 import { Paper, Image, Avatar, Typography, Box, Grid, GridListTile, GridList, Button, Card, CardMedia } from '@material-ui/core';
 import {Route, Link} from 'react-router-dom';
 
+import  firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
+import 'firebase/storage';
+// import firebase from 'firebase/app';
+import 'firebase/database';
+
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCVCGlSOSxJoz81l9I9KYyRWbqNn2w6Eaw",
+  authDomain: "wezweb-deeb7.firebaseapp.com",
+  databaseURL: "https://wezweb-deeb7.firebaseio.com",
+  projectId: "wezweb-deeb7",
+  storageBucket: "wezweb-deeb7.appspot.com",
+  messagingSenderId: "656579364634",
+  appId: "1:656579364634:web:f6058d0e0a72fa10780ea3",
+  measurementId: "G-H62D2ZD4DY"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database().ref();
+var storage = firebase.storage();
+var storageRef = storage.ref();
+
+
 const useStyles = makeStyles({
     avatar1: {
         width: 100,
@@ -30,8 +56,25 @@ const useStyles = makeStyles({
     }
 
 })
+
+
+// const DLRef = () => {
+    
+//         storageRef.child("DevilsLake.mp4").getDownloadURL().then(function(url) {
+//             console.log("url is: ", url)
+//            return (    
+//            <video style={{marginTop: "20vh", height: "50vh"}} controls>
+//                 <source src={url}></source>
+//             </video> 
+//             )
+//         })
+    
+// }
 const Movies = ()  => {
     const classes = useStyles();
+    const DLRef = storageRef.child("DevilsLake.mp4").getDownloadURL();
+    console.log("storageRef is: ", storageRef.fullPath);
+    console.log("DLRef is: ", DLRef.name);
     // const [data, setData] = useState({});
     // const movies = Object.values(data);
 
@@ -51,6 +94,7 @@ const Movies = ()  => {
             <Grid item>
                 <Paper elevation={0} className={classes.paper2}>
                     <div >
+                        {/* <DLRef/> */}
                         <video style={{marginTop: "20vh", height: "50vh"}} controls>
                             <source src="../Movies/DevilsLake.mp4"></source>
                         </video>

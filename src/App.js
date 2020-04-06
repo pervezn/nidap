@@ -16,23 +16,7 @@ import Movies from './LLLMovies';
 import Photos from './LLLPhotos';
 import Writing from './LLLWriting';
 import Travel from './LLLTravel';
-import firebase from 'firebase/app';
-import 'firebase/database';
 
-
-const firebaseConfig = {
-  apiKey: "AIzaSyCVCGlSOSxJoz81l9I9KYyRWbqNn2w6Eaw",
-  authDomain: "wezweb-deeb7.firebaseapp.com",
-  databaseURL: "https://wezweb-deeb7.firebaseio.com",
-  projectId: "wezweb-deeb7",
-  storageBucket: "wezweb-deeb7.appspot.com",
-  messagingSenderId: "656579364634",
-  appId: "1:656579364634:web:f6058d0e0a72fa10780ea3",
-  measurementId: "G-H62D2ZD4DY"
-};
-
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database().ref();
 
 const defaultProps = {
  style: { width: '10rem', height: '10rem' },

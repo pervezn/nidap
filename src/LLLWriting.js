@@ -4,7 +4,7 @@ import './App.css';
 import { makeStyles } from '@material-ui/styles';
 import { Paper, Image, Avatar, Typography, Grid, CardHeader, IconButton, CardContent, CardActions, Button, Card, CardMedia } from '@material-ui/core';
 import {Route, Link} from 'react-router-dom';
-import { ShareIcon} from '@material-ui/icons/Share';
+// import { ShareIcon} from '@material-ui/icons/Share';
  
 const useStyles = makeStyles(theme => ({
    avatar1: {
