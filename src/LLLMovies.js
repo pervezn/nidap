@@ -72,12 +72,26 @@ const useStyles = makeStyles({
 // }
 const Movies = ()  => {
     const classes = useStyles();
-    const DLRef = storageRef.child("DevilsLake.mp4").getDownloadURL();
-    console.log("storageRef is: ", storageRef.fullPath);
-    console.log("DLRef is: ", DLRef.name);
+    const [movie, setMovie] = useState(null);
+    // const DLRef = storageRef.child("DevilsLake.mp4").getDownloadURL();
+    // console.log("storageRef is: ", storageRef.fullPath);
+    // console.log("DLRef is: ", DLRef.name);
     // const [data, setData] = useState({});
     // const movies = Object.values(data);
 
+
+    const componentDidMount = (text) => {
+        const movie = firebase.storage().ref().child(text);
+        movie.getDownloadURL().then((url) => {
+            setMovie(url)
+            // console.log("url is: ", url)
+            
+        }); 
+            
+            // this.setState({ mov: url })});
+    };
+    componentDidMount("DevilsLake.mp4");
+    
     return (
       <div className="Movies">
         <Grid container style={{height: "100%"}}>
@@ -96,13 +110,19 @@ const Movies = ()  => {
                     <div >
                         {/* <DLRef/> */}
                         <video style={{marginTop: "20vh", height: "50vh"}} controls>
-                            <source src="../Movies/DevilsLake.mp4"></source>
+                            <source src={movie}></source>
+                            { console.log("here") }
+                            { console.log("movie is: ", movie) }
+                            {/* { console.log(typeof movie) } */}
                         </video>
                         <video style={{marginTop: "20vh", height: "50vh"}} controls>
                             <source src="../Movies/Seattle2018.mp4"></source>
                         </video>
                         <video style={{marginTop: "20vh", height: "50vh"}} controls>
                             <source src="../Movies/Summer2019.mp4"></source>
+                        </video>
+                        <video style={{marginTop: "20vh", height: "50vh"}} controls>
+                            <source src="../Movies/SpainHighlights!.mp4"></source>
                         </video>
                     </div>
                     
