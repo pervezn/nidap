@@ -4,14 +4,14 @@ import './App.css';
 import { makeStyles } from '@material-ui/styles';
 import { Paper, Image, Avatar, Typography, Box, Grid, GridListTile, GridList, Button, Card, CardMedia } from '@material-ui/core';
 import {Route, Link} from 'react-router-dom';
-
+import "../node_modules/video-react/dist/video-react.css";
 import  firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/storage';
 // import firebase from 'firebase/app';
 import 'firebase/database';
-
+import { Player } from 'video-react';
 
 
 const firebaseConfig = {
@@ -72,25 +72,34 @@ const useStyles = makeStyles({
 // }
 const Movies = ()  => {
     const classes = useStyles();
-    const [movie, setMovie] = useState(null);
-    // const DLRef = storageRef.child("DevilsLake.mp4").getDownloadURL();
-    // console.log("storageRef is: ", storageRef.fullPath);
-    // console.log("DLRef is: ", DLRef.name);
-    // const [data, setData] = useState({});
-    // const movies = Object.values(data);
+    const [DL, setDL] = useState(null);
+    const [seattle, setSeattle] = useState(null);
+    const [summer, setSummer] = useState(null)
+    const [spain, setSpain] = useState(null)
 
+    useEffect(() => {
+        const fetchMovie = async () => {
+            const dl = firebase.storage().ref().child("DevilsLake.mp4");
+            const seattle = firebase.storage().ref().child("Seattle2018.mp4");
+            const summer = firebase.storage().ref().child("Summer2019.mp4");
+            const spain = firebase.storage().ref().child("SpainHighlights!.mp4");
+            await dl.getDownloadURL().then((url)  => {
+                setDL(url);
+            }); 
+            await seattle.getDownloadURL().then((url)  => {
+                setSeattle(url);
+            }); 
+            
+            await spain.getDownloadURL().then((url)  => {
+                setSpain(url);
+            }); 
 
-    const componentDidMount = (text) => {
-        const movie = firebase.storage().ref().child(text);
-        movie.getDownloadURL().then((url) => {
-            setMovie(url)
-            // console.log("url is: ", url)
-            
-        }); 
-            
-            // this.setState({ mov: url })});
-    };
-    componentDidMount("DevilsLake.mp4");
+            await summer.getDownloadURL().then((url)  => {
+                setSummer(url);
+            }); 
+        }
+        fetchMovie();
+    }, []);
     
     return (
       <div className="Movies">
@@ -108,22 +117,21 @@ const Movies = ()  => {
             <Grid item>
                 <Paper elevation={0} className={classes.paper2}>
                     <div >
-                        {/* <DLRef/> */}
-                        <video style={{marginTop: "20vh", height: "50vh"}} controls>
-                            <source src={movie}></source>
-                            { console.log("here") }
-                            { console.log("movie is: ", movie) }
-                            {/* { console.log(typeof movie) } */}
-                        </video>
-                        <video style={{marginTop: "20vh", height: "50vh"}} controls>
-                            <source src="../Movies/Seattle2018.mp4"></source>
-                        </video>
-                        <video style={{marginTop: "20vh", height: "50vh"}} controls>
-                            <source src="../Movies/Summer2019.mp4"></source>
-                        </video>
-                        <video style={{marginTop: "20vh", height: "50vh"}} controls>
-                            <source src="../Movies/SpainHighlights!.mp4"></source>
-                        </video>
+                        <div style={{marginTop: "20vh", height: "50vh"}}>
+                            <Player playsInline src={DL} />
+                        </div>
+
+                        <div style={{marginTop: "20vh", height: "50vh"}}>
+                            <Player playsInline src={seattle} />
+                        </div>
+
+                        <div style={{marginTop: "20vh", height: "50vh"}}>
+                            <Player playsInline src={summer} />
+                        </div>
+
+                        <div style={{marginTop: "20vh", height: "50vh"}}>
+                            <Player playsInline src={spain} />
+                        </div>
                     </div>
                     
                 </Paper>
