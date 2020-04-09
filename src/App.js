@@ -16,7 +16,7 @@ import Movies from './LLLMovies';
 import Photos from './LLLPhotos';
 import Writing from './LLLWriting';
 import Travel from './LLLTravel';
-
+import Projects from "./Projects";
 
 const defaultProps = {
  style: { width: '10rem', height: '10rem' },
@@ -30,6 +30,7 @@ const App = ()  => {
      <Route exact path="/" component={Home} />
      <Route exact path="/home" component={Home} />
      <Route exact path="/about" component={About} />
+     <Route exact path="/projects" component={Projects} />
      <Route exact path="/projects/factflow" component={FactFlow} />
      <Route exact path="/projects/tropetracker" component={TropeTracker} />
      <Route exact path="/projects/internships" component={Internships} />
@@ -38,6 +39,7 @@ const App = ()  => {
      <Route exact path="/LalaLand/Photos" component={Photos} />
      <Route exact path="/LalaLand/Writing" component={Writing} />
      <Route exact path="/LalaLand/Travel" component={Travel} />
+     
    </div>
   
  );

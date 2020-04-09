@@ -89,7 +89,7 @@ const FactFlow = ()  => {
              <Button className={classes.button1}> <Link style={{color: "#49BEAA", textDecoration: "none"}} to="/">Home</Link></Button>
              <Button className={classes.button1}>  <Link style={{color: "#49BEAA", textDecoration: "none"}} to="/about">About</Link></Button>
              <Button className={classes.button1}>Resume</Button>
-             <Button className={classes.button1}>Projects</Button>
+             <Button className={classes.button1}>  <Link style={{color: "#49BEAA", textDecoration: "none"}} to="/projects">Projects</Link></Button>
              <Button className={classes.button2} style={{color: "#EEB868"}}>Fact Flow</Button>
              <Button className={classes.button2}><Link style={{color: "#49BEAA", textDecoration: "none"}} to="/projects/tropetracker">Trope Tracker</Link></Button>
              <Button className={classes.button2}><Link style={{color: "#49BEAA", textDecoration: "none"}} to="/projects/internships">Internships</Link></Button>
