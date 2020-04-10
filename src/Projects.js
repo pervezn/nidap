@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   },
    paper1:{
        width: "20vw",
-       height: "200px",
+       height: "300px",
        position: "fixed",
       
    },
@@ -81,12 +81,15 @@ const Projects = ()  => {
        <Grid container>
            <Grid item>
            <Paper elevation={0} className={classes.paper1}  style={{bottom: "0"}}>
-               {/* ^^ in the inspector it's not allowing display: sticky or bottom: 0 */}
-                   <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/Movies">Movies</Link></Button>
-                   <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/Photos">Photos</Link></Button>
-                   <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/Writing">Writing</Link></Button>
-                   <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/Travel">Travel</Link></Button>
-               </Paper>
+                <Button className={classes.button1}><Link style={{color: "#EEB868", textDecoration: "none"}} to="/projects">Projects</Link></Button>
+                <Button className={classes.button1} style={{marginLeft: "7vw"}}><Link style={{color: "#55769A", textDecoration: "none"}} to="/projects/factflow">Fact Flow</Link></Button>
+                <Button className={classes.button1} style={{marginLeft: "7vw"}}><Link style={{color: "#55769A", textDecoration: "none"}} to="/projects/tropetracker">Trope Tracker</Link></Button>
+                <Button className={classes.button1} style={{marginLeft: "7vw"}}><Link style={{color: "#55769A", textDecoration: "none"}} to="/projects/internships">internships</Link></Button>
+                <Button className={classes.button1} ><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/Movies">Movies</Link></Button>
+                <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/Photos">Photos</Link></Button>
+                <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/Writing">Writing</Link></Button>
+                <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/Travel">Travel</Link></Button>
+            </Paper>
            </Grid>
            <Grid item style={{marginLeft: "20vw"}}>
             <Paper elevation={0} className={[classes.paper2, classes.paperMaster]}>

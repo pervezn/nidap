@@ -36,6 +36,11 @@ const LalaLand = ()  => {
            <Typography variant="body1" style={{width: "30vw", marginLeft: "auto", marginRight:"auto", color: "#EEB868", marginTop: "5vh", textAlign: "center"}}>Hello World. Welcome to my Lala-Land where I am unrestrictedly and unapologetically me. Find out more about me through my many other hobbies. I hope to connect with you at some level !</Typography>
        </Paper>
        <div style={{display: "inline-box", marginTop: "15vh", width: "100%"}}>
+          <Button style={{ fontSize: "large"}}><Link style={{color: "#55769A", textDecoration: "none"}} to="/projects">Projects</Link></Button>
+          <Button style={{color: "#55769A", fontSize: "large", marginLeft: "3vw"}}><Link style={{color: "#55769A", textDecoration: "none"}} to="/about">About</Link></Button>
+          <Button style={{color: "#55769A", fontSize: "large", marginLeft: "3vw"}}>Resume</Button>
+       </div>
+       <div style={{display: "inline-box", marginTop: "5vh", width: "100%"}}>
            {/* <div style={{float: "right", width: "50%"}}> */}
            <Button style={{ fontSize: "large"}}><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/Movies">Movies</Link></Button>
            <Button style={{color: "#55769A", fontSize: "large", marginLeft: "3vw"}}><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/Photos">Photos</Link></Button>
