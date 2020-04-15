@@ -64,7 +64,7 @@ const useStyles = makeStyles({
     paper4: {
       width: "40vw",
       marginTop: "5vh",
-      marginLeft: "7vw",
+      marginLeft: "10vw",
       textAlign: "left",
       color: "#55769A",
     },
@@ -190,7 +190,8 @@ const About = ()  => {
                     <Typography variant="body1" style={{marginTop: "5vh"}}>I spent much of my childhood in Mansfield, Ohio where I learned how to ride my bike and collected rocks for fun. In 2008, I moved to Columbus, Ohio, a much larger city than Mansfield. Here, I navigated the intricacies of middle school and high school. I developed a sort-of identity and sense of self and honed my leadership and soccer skills. For college, I moved to Evanston, Illinois, to attend Northwestern University. Only a little north of Chicago, I was now living near a large city, and what I learned in my time there was equally as vast. In all three places, I learned to see the beauty in what each city had to offer. Mansfield embodies simplicity, whereas Columbus offers balance. Evanston, and by extension Chicago, pushes for an internal drive, or passion. Simplicity, balance, and drive are qualities that I continue to implement in my life, whether it be work, or my everyday life!</Typography>
                     <Typography variant="body1" style={{marginTop: "5vh"}}>As I enter the workforce, my goals are to learn as much as I can and to meet and learn from people. Looking to the future, I want to be a full stack engineer that can effortlessly create beautiful and unique websites for others and myself.</Typography>
                     <Typography variant="body1" style={{marginTop: "5vh"}}>Outside of my life as an engineer, you can normally find me at a soccer field, with my sketchbook, or taking pictures and videos of my adventures in various cities! I also love reading, so if you're looking for a good book to read, check some of these out.</Typography>
-                    <Grid container style={{marginTop: "10vh"}}>
+                  </Paper>
+                  <Grid container style={{marginTop: "10vh", marginLeft: "7vw"}}>
                       <Grid item>
                         <Grid className={classes.grid1} container justify="center" spacing={9}>
                             {tileData.map(tile => (
@@ -203,7 +204,6 @@ const About = ()  => {
                         </Grid>
                       </Grid>
                     </Grid>
-                  </Paper>
                 </Paper>
             </Grid>
             

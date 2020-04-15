@@ -156,7 +156,7 @@ const TropeTracker = ()  => {
                       <Typography variant="body1" style={{marginTop: "5vh"}}>Our tech stack for this project included: ReactJS (frontend), NodeJS/Python (backend), Firebase (database), Twitter API ($$$), Newsbot (Chrome extension)</Typography>
                       <Typography variant="body1" style={{marginTop: "5vh"}}>Technical Architecture:</Typography>
                       <img src={"../Pictures/TT8.png"} style={{width:"100%",  alignContent:"right", marginTop: "2vw"}}/>
-                      <Button onClick={() => {window.open('https://trope-tracker-62549.firebaseapp.com/#/')}} style={{color: "#EF767A"}}><Typography variant="body1" style={{marginTop: "5vh"}}>Visit Trope Tracker</Typography></Button>
+                      <Button onClick={() => {window.open('https://trope-tracker-62549.firebaseapp.com/#/')}} style={{color: "#EEB868"}}><Typography variant="body1" style={{marginTop: "5vh"}}>Visit Trope Tracker</Typography></Button>
                   </Paper>
                 </Paper>
               </Grid>
