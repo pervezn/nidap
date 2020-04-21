@@ -125,7 +125,7 @@ const Photos = ()  => {
          <div>
        <Grid container>
            <Grid item>
-           <Paper elevation={0} className={classes.paper1}  style={{bottom: "0"}}>
+           <Paper elevation={0} className={classes.paper1}  style={{top: "0", paddingTop: "5vh"}}>
                {/* ^^ in the inspector it's not allowing display: sticky or bottom: 0 */}
                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/projects">Projects</Link></Button>
                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/Movies">Movies</Link></Button>
@@ -146,9 +146,9 @@ const Photos = ()  => {
                </div>
            </Grid>
            <Grid item>
-               <Paper elevation={0} className={classes.paper1} style={{top: "0"}}>
-                   <Typography variant="h5" style={{color: "#EEB868", marginTop: "3vh"}}>Nida Pervez</Typography>
+               <Paper elevation={0} className={classes.paper1} style={{top: "0"}}>                   
                    <Button> <Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/"><Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1}/></Link></Button>
+                   <Typography variant="h5" style={{color: "#EEB868", marginTop: "3vh"}}>Nida Pervez</Typography>
                </Paper>
            </Grid>
        </Grid>
