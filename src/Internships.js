@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   avatar1: {
       width: 100,
       height: 100,
-      marginTop: "2vw",
+      marginTop: "1vw",
       // display: "flex",
       // justifyContent: "center",
       marginLeft: "auto",
@@ -121,11 +121,7 @@ const AppleInternship = ({}) => {
 const AllstateInternship = ({}) => {
   const classes = useStyles();
   return (
-    <Paper elevation={0} className={classes.paper8}>
-      <Paper elevation={0} className={classes.paper7} style={{width: "11vw", }}>
-        <Button style={{color: "#55769A", marginTop: "2vh"}}><Typography variant="body2">Summer 2019</Typography></Button>
-        <Button style={{color: "#EEB868", marginBottom: "35vh", marginTop: "2vh"}}><Typography variant="body2">Summer 2018</Typography></Button>
-      </Paper> 
+    
       <Paper elevation={0} className={classes.paper7} style={{width: "40vw"}}>
         <Typography variant="h6">Allstate</Typography>
         <Typography variant="body1">
@@ -137,71 +133,26 @@ const AllstateInternship = ({}) => {
         <Typography variant="body1">
           I spent the majority of my time working on the Editable Quote. Editable Quote is an edit feature for proposals that are sent out to customers, which allows users to streamline the quote process by seeing their quotes update in real time as different options are selected. By allowing users to edit their own quotes, they would bypass the ping pong communication that happens between insurance agents. This adaptation projected to increase bind rates by 20%. To complete this project, I used C#, JavaScript, Html, and CSS to implement the front end, and an XML file to read and write to the backend. 
         </Typography> 
-        {/* <Typography variant="h6" style={{marginTop: "2vw"}}> My Role</Typography>
-        <Typography variant="h6" style={{marginTop: "2vw"}}> Design Process</Typography> */}
       </Paper>
-    </Paper>
   )};
-
-const buttonColor = selected => (
-  selected ? 'success' : null
-);
 
 const YearSelector = ({state}) => {
   return(
   <React.Fragment>
     { Object.values(years) //Returns ["Summer 2018", "Sumemr 2019"]
       .map(value => 
-      
       <Button 
         key={value} 
         // color={ buttonColor(value === state.year) }
-        onClick={ () => {
-          // {
-          // console.log("clicked! value is: " + value)
-          // console.log("state.year b4 is: ", state.year)
-          state.setYear(value)
-          console.log("Here bb4 if")
-          if(state.year == "Summer 2019"){
-            console.log("Here in if")
-            return <AppleInternship/>
-          } else {
-            console.log("Here in else")
-            return <AllstateInternship/>
-          }
-          console.log("Here after if")
-          // console.log("state.year after is: ", state.year)
-          
-        //   return (
-            
-        //   state.year === "Summer 2019" ? <AppleInternship/>:<AllstateInternship/>
-        //   )
-        // }
-        }}
-        >{ value }
+        onClick={ () => state.setYear(value)}>
+        { value }
       </Button>
       )
     }
   </React.Fragment>
 )}
 
-// const displayInternships = ({props}) => {
-//   <YearSelector state={{year, setYear}} />
-//   if
-// }
 
-function DisplayInternships(props) {
-  const isApple = props.isApple;
-  if(isApple){
-    console.log("Here in if")
-    return <AppleInternship/>
-  } else {
-    console.log("Here in else")
-    return <AllstateInternship/>
-  }
-  
-
-}
 
 
 const Internships = ()  => {
@@ -239,23 +190,19 @@ const Internships = ()  => {
                       {/* <Paper elevation={0} className={classes.paper8}></Paper> */}
                     </Paper>
                   </Paper >
-                  <Paper elevation={0} className={classes.paper8}>
-                    <Paper elevation={0} className={classes.paper7} style={{width: "11vw", }}>
-                      
-                    {/* <Button style={{color: "#55769A", marginBottom: "35vh", marginTop: "2vh"}}><Typography variant="body2">Summer 2018</Typography></Button>
-                    <Button style={{color: "#EEB868", marginTop: "2vh"}}><Typography variant="body2">Summer 2019</Typography></Button> */}
+                  {/* <Paper elevation={0} className={classes.paper8}> */}
+                    {/* <Paper elevation={0} className={classes.paper7} style={{width: "11vw", }}> */}
                     <YearSelector state={{year, setYear}} />
-                    {/* <DisplayInternships isApple={true}/> */}
-                    {/* <AppleInternship/>
-                    <AllstateInternship/> */}
-                    </Paper>
-                  </Paper>
+                    {year === "Summer 2019" ? <AppleInternship/>:<AllstateInternship/>}
+                    {/* </Paper> */}
+                  {/* </Paper> */}
                 </Paper>
               </Grid>
                <Grid item>
                    <Paper elevation={0} className={classes.paper1} style={{top: "0"}}>
+                      <Typography variant="h5" style={{color: "#EEB868", marginTop: "5vh"}}>Nida Pervez</Typography>
                        <Button> <Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/"><Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1}/></Link></Button>
-                       <Typography variant="h5" style={{color: "#EEB868", marginTop: "3vh"}}>Nida Pervez</Typography>
+                       
                    </Paper>
                </Grid>
            </Grid>

@@ -17,6 +17,7 @@ import Photos from './LLLPhotos';
 import Writing from './LLLWriting';
 import Travel from './LLLTravel';
 import Projects from "./Projects";
+import Test from "./test";
 
 const defaultProps = {
  style: { width: '10rem', height: '10rem' },
@@ -39,6 +40,7 @@ const App = ()  => {
      <Route exact path="/LalaLand/Photos" component={Photos} />
      <Route exact path="/LalaLand/Writing" component={Writing} />
      <Route exact path="/LalaLand/Travel" component={Travel} />
+     <Route exact path="/test" component={Test} />
      
    </div>
   

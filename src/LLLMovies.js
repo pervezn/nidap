@@ -35,7 +35,7 @@ const useStyles = makeStyles({
     avatar1: {
         width: 100,
         height: 100,
-        marginTop: "2vw",
+        marginTop: "1vw",
         marginLeft: "auto",
         marginRight:"auto"
     },
@@ -126,8 +126,8 @@ const Movies = ()  => {
             
             <Grid item>
                 <Paper elevation={0} className={classes.paper1} style={{ top: "0",}}>
+                    <Typography variant="h5" style={{color: "#EEB868", marginTop: "5vh"}}>Nida Pervez</Typography>
                    <Button> <Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/"><Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1}/></Link></Button>
-                   <Typography variant="h5" style={{color: "#EEB868", marginTop: "3vh"}}>Nida Pervez</Typography>
                 </Paper>
             </Grid>
             

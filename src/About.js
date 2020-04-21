@@ -32,7 +32,7 @@ const useStyles = makeStyles({
     avatar1: {
         width: 100,
         height: 100,
-        marginTop: "2vw",
+        // marginTop: "2vw",
         marginLeft: "auto",
         marginRight:"auto"
     },
@@ -168,7 +168,7 @@ const About = ()  => {
       <div className="About">
         <Grid container style={{height: "100%"}}>
             <Grid item>
-                <Paper elevation={0} className={classes.paper1}  style={{bottom: "0"}}> 
+                <Paper elevation={0} className={classes.paper1}  style={{top: "0", paddingTop: "5vh"}}> 
                     <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/projects">Projects</Link></Button>
                     <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/Movies">Movies</Link></Button>
                     <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/Photos">Photos</Link></Button>
@@ -192,24 +192,27 @@ const About = ()  => {
                     <Typography variant="body1" style={{marginTop: "5vh"}}>Outside of my life as an engineer, you can normally find me at a soccer field, with my sketchbook, or taking pictures and videos of my adventures in various cities! I also love reading, so if you're looking for a good book to read, check out some of these.</Typography>
                   </Paper>
                   <Grid container style={{marginTop: "10vh", marginLeft: "7vw"}}>
-                      <Grid item>
-                        <Grid className={classes.grid1} container justify="center" spacing={9}>
-                            {tileData.map(tile => (
-                              <Grid key={tile.title} item>
-                                <Paper className={classes.paper5}>
-                                <img style={{height: "200px",}} src={tile.img} alt={tile.title} />
-                                </Paper>
-                              </Grid>
-                            ))}
-                        </Grid>
+                    <Grid item>
+                      <Grid className={classes.grid1} container justify="center" spacing={9}>
+                          {tileData.map(tile => (
+                            <Grid key={tile.title} item>
+                              <Paper className={classes.paper5}>
+                              <img style={{height: "200px",}} src={tile.img} alt={tile.title} />
+                              </Paper>
+                            </Grid>
+                          ))}
                       </Grid>
                     </Grid>
+                  </Grid>
+                  <Paper elevation={0} className={classes.paper4}>
+                    <Typography variant="body1" style={{marginTop: "15vh"}}> If you would like to contact me directly, you can email me at nida.pervez16@gmail.com</Typography>
+                  </Paper>
                 </Paper>
             </Grid>
             
             <Grid item>
                 <Paper elevation={0} className={classes.paper1} style={{ top: "0",}}>
-                    <Typography variant="h5" style={{color: "#EEB868", marginTop: "3vh"}}>Nida Pervez</Typography>
+                    <Typography variant="h5" style={{color: "#EEB868", marginTop: "5vh"}}>Nida Pervez</Typography>
                    <Button> <Link style={{color: "#55769A", textDecoration: "none"}} to="/LalaLand/"><Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1}/></Link></Button>
                 </Paper>
             </Grid>
@@ -217,7 +220,7 @@ const About = ()  => {
         </Grid>
         <div style={{display: "inline-block", bottom: "0", alignContent:"center", marginTop: "25vh", width: "100vw"}}>
            <Button onClick={() => {window.open('https://www.linkedin.com/in/nida-pervez-956a20149/')}} style={{color: "#EF767A"}}>LinkedIn</Button>
-           <Button style={{color: "#EF767A"}}>Email</Button>
+           {/* <Button style={{color: "#EF767A"}}>Email</Button> */}
            <Button onClick={() => {window.open('https://github.com/pervezn')}} style={{color: "#EF767A"}}>Github</Button>
            <Button ><Link style={{color: "#EF767A", textDecoration: "none"}} to="/Home">Exit Lala-Land</Link></Button>
        </div>
