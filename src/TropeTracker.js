@@ -109,7 +109,7 @@ const TropeTracker = ()  => {
               <Grid item style={{marginLeft: "20vw"}}>
                 <Paper elevation={0} className={classes.paper2}>
                   <Paper elevation={0} className={classes.paper4} style={{width: "15vw",textAlign:"center"}}>
-                      {/* <img src={"../Pictures/knightLab.jpg"} style={{height:"100%",  alignContent:"right"}}/> */}
+                      <img src={"../Pictures/TT9.png"} style={{height:"100%",  alignContent:"right"}}/>
                   </Paper>
                   <Paper elevation={0} className={classes.paper4} style={{width: "35vw"}}>
                       <Typography variant="h3" style={{marginTop: "0px", paddingTop: "0px", color: "#EF767A"}}>Northwestern University: Trope Tracker</Typography>
@@ -171,7 +171,6 @@ const TropeTracker = ()  => {
            </div>
            <div style={{display: "inline-block", bottom: "0", alignContent:"center", marginTop: "15vh"}}>
                <Button onClick={() => {window.open('https://www.linkedin.com/in/nida-pervez-956a20149/')}} style={{color: "#EF767A"}}>LinkedIn</Button>
-               <Button style={{color: "#EF767A"}}>Email</Button>
                <Button onClick={() => {window.open('https://github.com/pervezn')}} style={{color: "#EF767A"}}>Github</Button>
                <Button ><Link style={{color: "#EF767A", textDecoration: "none"}} to="/Home">Exit Lala-Land</Link></Button>
            </div>
