@@ -15,7 +15,8 @@ import Projects from "./Projects";
 import About from "./About";
 import FactFlow from "./FactFlow";
 import TropeTracker from "./TropeTracker";
-import Internships from "./Internships"
+import Internships from "./Internships";
+import Resume from "./Resume";
 
 const defaultProps = {
  style: { width: '10rem', height: '10rem' },
@@ -37,6 +38,7 @@ const App = ()  => {
      <Route exact path="/Photos" component={Photos} />
      <Route exact path="/Writing" component={Writing} />
      <Route exact path="/Travel" component={Travel} />
+     <Route exact path="/Resume" component={Resume} />
      
    </div>
   

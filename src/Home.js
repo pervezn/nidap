@@ -59,7 +59,7 @@ const Home = ()  => {
         </Button>
 
         <Button className={classes.button1} >
-          <Link style={{color: "#55769A", textDecoration: "none"}} to="/">
+          <Link style={{color: "#55769A", textDecoration: "none"}} to="/Resume">
             <img src={"../Pictures/ResumeIcon.png"} style={{width:"30%"}}/>
             <Typography>Resume</Typography>
           </Link>
