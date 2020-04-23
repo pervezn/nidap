@@ -53,7 +53,7 @@ const Resume = ()  => {
                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/Movies">Movies</Link></Button>
                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/Photos">Photos</Link></Button>
                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/Writing">Writing</Link></Button>
-                   <Button className={classes.button1}><Link style={{color: "#EEB868", textDecoration: "none"}} to="/Travel">Travel</Link></Button>
+                   <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/Travel">Travel</Link></Button>
                </Paper>
            </Grid>
            <Grid item>
@@ -92,23 +92,23 @@ const Resume = ()  => {
                             </ul>
                             <Typography variant="body1" style={{textAlign:"Left", marginLeft: "1vw", color: "white"}}>Work Experience</Typography>
                             <div style={{display:"flex"}}>
-                                <div style={{textAlign:"Left", marginLeft: "1vw", fontSize: "13px", color: "white"}}> Software Engineering Internship, Apple (Apple Online Store)</div>
+                                <div style={{textAlign:"Left", marginLeft: "1vw", fontSize: "13px", color: "white"}}> <Link style={{color: "#EEB868",}} to="/projects/internships">Software Engineering Internship, Apple (Apple Online Store)</Link></div>
                                 <div style={{textAlign:"Right", marginLeft:"7vw", fontSize: "13px", color: "white"}}>  June 2019 - Present	</div>
                             </div>
                             <ul style={{marginTop: "0px", marginBottom:"0px"}}>
                                 <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Created a proof of concept collaborative shopping feature for the Apple Online Store</li>
-                                <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Used NodeJS, Express, and node-fetch API to connect and communicate to the server</li>
-                                <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Used jQuery, HTML, CSS, and Javascript to create interactive components.</li>
+                                <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Used <Link style={{fontWeight: "bold", color:"white", textDecoration: "none"}}>NodeJS, Express, and node-fetch API </Link> to connect and communicate to the server</li>
+                                <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Used <Link style={{fontWeight: "bold", color:"white", textDecoration: "none"}}>jQuery, HTML, CSS, and Javascript </Link> to create interactive components.</li>
                             </ul>
                             <div style={{display:"flex"}}>
-                                <div style={{textAlign:"Left", marginLeft: "1vw", fontSize: "13px", color: "white"}}> Software Engineering Internship, Allstate	</div>
+                                <div style={{textAlign:"Left", marginLeft: "1vw", fontSize: "13px", color: "white"}}> <Link style={{color: "#EEB868",}} to="/projects/internships">Software Engineering Internship, Allstate	</Link></div>
                                 <div style={{textAlign:"Right", marginLeft:"11vw", fontSize: "13px", color: "white"}}>  June 2018 - September 2018	</div>
                             </div>
                             <ul style={{marginTop: "0px", marginBottom:"0px"}}>
                                 <li style={{textAlign:"Left",  fontSize: "12px", color: "white"}}>Created a Content Management System web application that makes accessing and editing information from the database easier and more efficient for users</li>
-                                <li style={{textAlign:"Left",  fontSize: "12px", color: "white"}}>Used asp.NET MVC framework and HTML for the front end, Oracle Database for the backend, and C# to connect the two. Implements a grid to display the information</li>
+                                <li style={{textAlign:"Left",  fontSize: "12px", color: "white"}}>Used <Link style={{fontWeight: "bold", color:"white", textDecoration: "none"}}>asp.NET MVC framework and HTML</Link> for the front end, Oracle Database for the backend, and C# to connect the two. Implements a grid to display the information</li>
                                 <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Created Editable Quote, an edit feature for proposals that are sent out to customers, which allows users to streamline the quote process by seeing their quotes update in real time as different options are selected</li>
-                                <li style={{textAlign:"Left",fontSize: "12px", color: "white"}}>Used C#, JavaScript, Html, and CSS to implement the front end, and an XML file to read and write to the backend</li>
+                                <li style={{textAlign:"Left",fontSize: "12px", color: "white"}}>Used <Link style={{fontWeight: "bold", color:"white", textDecoration: "none"}}>C#, JavaScript, Html, and CSS </Link>to implement the front end, and an XML file to read and write to the backend</li>
                                 <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Projected to increase bind rates by 20%</li>
                             </ul>
                             <div style={{display:"flex"}}>
@@ -123,19 +123,25 @@ const Resume = ()  => {
                             </ul>
                             <Typography variant="body1" style={{textAlign:"Left", color: "white", marginLeft: "1vw"}}>Individual Projects</Typography>
                             <div style={{display:"flex"}}>
-                                <div style={{textAlign:"Left", marginLeft: "1vw", fontSize: "13px", color: "white"}}> Fact Flow	</div>
+                                <div style={{textAlign:"Left", marginLeft: "1vw", fontSize: "13px",}}> <Link style={{color: "#EEB868", }} to="/projects/factflow">Fact Flow</Link>	</div>
                                 <div variant="body2" style={{textAlign:"Right", marginLeft:"27vw", fontSize: "13px", color: "white"}}>   April 2019 - June 2019	</div>
                             </div>
                             <ul style={{marginTop: "0px", marginBottom:"0px"}}>
                             <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Created a Google Document add-on to assist and streamline the fact-checking process for news organizations</li>
-                            <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Used Google script and Javascript to develop the front end of the add-on</li>
+                            <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Used <Link style={{fontWeight: "bold", color:"white", textDecoration: "none"}}>Google script and Javascript</Link>to develop the front end of the add-on</li>
                             <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Closely communicated with the design/research team to properly manage overall goals</li>
-                            <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Implemented Firebase as a backend provider to manage multiple Google Documents simultaneously</li>
+                            <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Implemented <Link style={{fontWeight: "bold", color:"white", textDecoration: "none"}}>Firebase</Link> as a backend provider to manage multiple Google Documents simultaneously</li>
                             </ul>
                             <div style={{display:"flex"}}>
-                                <div style={{textAlign:"Left", marginLeft: "1vw", fontSize: "13px", color: "white"}}> Trope Tracker	</div>
+                                <div style={{textAlign:"Left", marginLeft: "1vw", fontSize: "13px", color: "white"}}> <Link style={{color: "#EEB868", }} to="/projects/tropetracker">Trope Tracker</Link>	</div>
                                 <div variant="body2" style={{textAlign:"Right", marginLeft:"20vw", fontSize: "13px", color: "white"}}>  September 2019 - December 2019	</div>
                             </div>
+                            <ul style={{marginTop: "0px", marginBottom:"0px"}}>
+                            <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Created a tool that discovers trope-article association via crowdsourced Twitter data</li>
+                            <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Developed website and chrome extension </li>
+                            <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Used <Link style={{fontWeight: "bold", color:"white", textDecoration: "none"}}>ReactJS, NodeJS/Python, and Firebase </Link> for the front-end, back-end, and database respectively</li>
+                            <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Used Twitter API to scrape information from Twitter</li>
+                            </ul>
                             {/* <div style={{display:"flex"}}>
                                 <div style={{textAlign:"Left", marginLeft: "1vw", fontSize: "12px", color: "white"}}> LatinNext</div>
                                 <div style={{textAlign:"Right", marginLeft:"15vw", fontSize: "12px", color: "white"}}> March 2020 - Present  	</div>
@@ -154,7 +160,7 @@ const Resume = ()  => {
        </Grid>
        <div style={{display: "inline-block", bottom: "0", alignContent:"center", marginTop: "5vh"}}>
            <Button onClick={() => {window.open('https://www.linkedin.com/in/nida-pervez-956a20149/')}} style={{color: "#EF767A"}}>LinkedIn</Button>
-           <Link style={{color: "#55769A", textDecoration: "none"}} to="/Resume"><Button style={{color: "#EF767A"}}>Resume</Button></Link>
+           <Link style={{color: "#55769A", textDecoration: "none"}} to="/Resume"><Button style={{color: "#EEB868"}}>Resume</Button></Link>
            <Button onClick={() => {window.open('https://github.com/pervezn')}} style={{color: "#EF767A"}}>Github</Button>
            {/* <Button ><Link style={{color: "#EF767A", textDecoration: "none"}} to="/Home">Exit Lala-Land</Link></Button> */}
        </div>

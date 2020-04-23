@@ -105,9 +105,6 @@ const FactFlow = ()  => {
  
    return (
 
-     
- 
-      
          <div className="FactFlow">
             <div>
            <Grid container>
