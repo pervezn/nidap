@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import "https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.24/paper-core.min.js"; 
+import paper from "paper";
+import view from "paper";
+import Raster from "paper";
+
+// import "https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.24/paper-core.min.js"; 
 
 const Balloon = ({}) => {
     paper.install(window)
+    {const canvas = document.getElementById("myCanvas") //maybe it doesn't know where to look?
+    console.log("canvas is: " + canvas)}
+ 
     paper.setup('myCanvas')
 
     const screenW = view.size.width;
@@ -52,7 +59,7 @@ const Balloon = ({}) => {
     view.onFrame = (event) => { for (const balloon of balloons) {moveBalloon(balloon)}}
   
     return (
-        <canvas id="myCanvas" style={{top: "0px", left: "0px", width: "100vw",height: "100vh", zIndex: "-5", position: "fixed"}}></canvas>
+        <React.Fragment></React.Fragment>
     )
   }
 
