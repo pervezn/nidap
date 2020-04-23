@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/styles';
 import { Paper, Image, Avatar, Typography, Box, Grid, GridListTile, GridList, Button, Card, CardMedia } from '@material-ui/core';
 import {Route, Link} from 'react-router-dom';
 
-// import Balloon from './Balloon';
+import Balloon from './Balloon';
  
 const useStyles = makeStyles({
    avatar1: {

@@ -1,35 +1,9 @@
 import React, { useEffect, useState } from 'react';
-// const useScript = url => {
-//     useEffect(() => {
-//       const script = document.createElement('script');
-  
-//       script.src = url;
-//       script.async = true;
-  
-//       document.body.appendChild(script);
-  
-//       return () => {
-//         document.body.removeChild(script);
-//       }
-//     }, [url]);
-//   };
-
-  useEffect(() => {
-    const script = document.createElement('script');
-  
-    script.src = "https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.24/paper-core.min.js";
-    script.async = true;
-    {console.log("HEREEE")}
-    document.body.appendChild(script);
-  
-    return () => {
-        {console.log("HERE in return")}
-      document.body.removeChild(script);
-    }
-  }, []);
+import "https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.24/paper-core.min.js"; 
 
 const Balloon = ({}) => {
-    // useScript('https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.24/paper-core.min.js')
+    paper.install(window)
+    paper.setup('myCanvas')
 
     const screenW = view.size.width;
     const screenH = view.size.height;  
@@ -75,15 +49,10 @@ const Balloon = ({}) => {
       }
     };
   
+    view.onFrame = (event) => { for (const balloon of balloons) {moveBalloon(balloon)}}
   
     return (
-      <React.Fragment>
-        <canvas style={{top: "0px", left: "0px", width: "100vw",height: "100vh", zIndex: "-5", position: "fixed"}}>
-          paper.install(window)
-          paper.setup('myCanvas')
-          {view.onFrame = (event) => { for (const balloon of balloons) {moveBalloon(balloon)}}}
-        </canvas>
-      </React.Fragment>
+        <canvas id="myCanvas" style={{top: "0px", left: "0px", width: "100vw",height: "100vh", zIndex: "-5", position: "fixed"}}></canvas>
     )
   }
 
