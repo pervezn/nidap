@@ -35,6 +35,8 @@ const useStyles = makeStyles({
  
 })
 
+{document.title = "Nida Pervez"}
+
 const Home = ()  => {
    const classes = useStyles();
    return (

@@ -93,7 +93,7 @@ const Resume = ()  => {
                             <Typography variant="body1" style={{textAlign:"Left", marginLeft: "1vw", color: "white"}}>Work Experience</Typography>
                             <div style={{display:"flex"}}>
                                 <div style={{textAlign:"Left", marginLeft: "1vw", fontSize: "13px", color: "white"}}> <Link style={{color: "#EEB868",}} to="/projects/internships">Software Engineering Internship, Apple (Apple Online Store)</Link></div>
-                                <div style={{textAlign:"Right", marginLeft:"7vw", fontSize: "13px", color: "white"}}>  June 2019 - Present	</div>
+                                <div style={{textAlign:"Right", marginLeft:"3vw", fontSize: "13px", color: "white"}}>  June 2019 - September 2019</div>
                             </div>
                             <ul style={{marginTop: "0px", marginBottom:"0px"}}>
                                 <li style={{textAlign:"Left", fontSize: "12px", color: "white"}}>Created a proof of concept collaborative shopping feature for the Apple Online Store</li>
