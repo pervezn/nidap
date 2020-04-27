@@ -32,7 +32,7 @@ const useStyles = makeStyles({
     avatar1: {
         width: 100,
         height: 100,
-        // marginTop: "2vw",
+        marginTop: "1vw",
         marginLeft: "auto",
         marginRight:"auto"
     },
