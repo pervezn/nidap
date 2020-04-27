@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
-import { Paper, Image, Avatar, Typography, Box, Grid, GridListTile, GridList, Button, Card, CardMedia } from '@material-ui/core';
-import { borders } from '@material-ui/system';
-import { makeStyles } from '@material-ui/styles';
-import { typeAlias } from '@babel/types';
 import {Route, Link} from 'react-router-dom';
 import Home from './Home';
 import Movies from './Movies';
@@ -23,10 +19,15 @@ import Article2 from "./Articles/Article2"
 const defaultProps = {
  style: { width: '10rem', height: '10rem' },
 };
- 
+
+
  
 const App = ()  => {
- 
+  // useEffect(() => {
+  //   {window.scroll(0, 0)}
+  //  },[]);
+
+
  return (
    <div className="App">
      <Route exact path="/" component={Home} />

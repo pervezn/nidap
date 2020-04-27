@@ -125,7 +125,7 @@ const Projects = ()  => {
                         <Typography  style={{textAlign: "left", margin:"1vw", color:"#EF767A"}}>Past Internships</Typography>
                         </Paper>  
                         <Paper elevation={0} className={classes.paper6}>
-                        <img src={"../Pictures/Apple.png"} style={{height:"100%",marginLeft:"5vw", alignContent:"right"}}/>
+                        <img src={"../Pictures/Apple.png"} style={{height:"100%", alignContent:"right"}}/>
                         </Paper>
                     </Paper>
                     </Button>

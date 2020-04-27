@@ -22,7 +22,7 @@ const useStyles = makeStyles({
    },
    paper2:{
        width: "60vw",
-       height: "100%",
+    //    height: "100%",
        marginTop: "20vh",
        marginLeft: "20vw",
    },

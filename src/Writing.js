@@ -23,13 +23,17 @@ const useStyles = makeStyles(theme => ({
    },
    paper2:{
        width: "60vw",
-       height: "100%",
+    //    height: "100%",
        marginTop: "20vh",
        marginLeft: "20vw",
    },
    button1: {
        display: "block",
        marginLeft: "5vw",
+   },
+   button2:{
+    //    width:"50%",
+       padding: 0,
    },
    media: {
        height: 0,
@@ -65,7 +69,7 @@ const Writing = ()  => {
            <Grid item>
                <Paper elevation={0} className={classes.paper2}>
                    <Link style={{ textDecoration: "none"}} to="/Writing/MuslimAmericanCulture">
-                    <Button>
+                    {/* <Button className={classes.button2}> */}
                     <Card className={classes.card1}>
                        <CardHeader
                            title="Muslim-American Culture"
@@ -76,16 +80,17 @@ const Writing = ()  => {
                            title="Paella dish"
                        />
                        <CardContent>
-                           <Typography variant="body2" color="textSecondary" component="p">
+                           <Typography variant="body2" component="p" style={{color:"#55769A"}}>
                            This impressive paella is a perfect party dish and a fun meal to cook together with your
                            guests. Add 1 cup of frozen peas along with the mussels, if you like.
                            </Typography>
                        </CardContent>
                     </Card>
-                    </Button>
+                    {/* </Button> */}
                    </Link>
                    <Link style={{ textDecoration: "none"}} to="/Writing/MyMuslimPride">
-                   <Button><Card className={classes.card1}>
+                   {/* <Button className={classes.button2}> */}
+                       <Card className={classes.card1}>
                        <CardHeader
                            title="My Muslim Pride"
                            subheader="May 1, 2019"
@@ -95,15 +100,16 @@ const Writing = ()  => {
                            title="Paella dish"
                        />
                        <CardContent>
-                           <Typography variant="body2" color="textSecondary" component="p">
+                           <Typography variant="body2" style={{color:"#55769A"}} component="p">
                            This impressive paella is a perfect party dish and a fun meal to cook together with your
                            guests. Add 1 cup of frozen peas along with the mussels, if you like.
                            </Typography>
                        </CardContent>
-                   </Card></Button> 
+                   </Card>
+                   {/* </Button>  */}
                    </Link>
                    <Link style={{ textDecoration: "none"}} to="/Writing/">
-                   <Button>
+                   {/* <Button className={classes.button2}> */}
                     <Card className={classes.card1}>
                        <CardHeader
                            title="The Thing with Men"
@@ -114,16 +120,17 @@ const Writing = ()  => {
                            title="Paella dish"
                        />
                        <CardContent>
-                           <Typography variant="body2" color="textSecondary" component="p">
+                           <Typography variant="body2" style={{color:"#55769A"}} component="p">
                            This impressive paella is a perfect party dish and a fun meal to cook together with your
                            guests. Add 1 cup of frozen peas along with the mussels, if you like.
                            </Typography>
                        </CardContent>
                     </Card>
-                   </Button>
+                   {/* </Button> */}
                    </Link>
                    <Link style={{ textDecoration: "none"}} to="/Writing/">
-                   <Button><Card className={classes.card1}>
+                   {/* <Button className={classes.button2}> */}
+                       <Card className={classes.card1}>
                        <CardHeader
                            title="What College Taught Me"
                            subheader="March 14, 2019"
@@ -133,13 +140,13 @@ const Writing = ()  => {
                            title="Paella dish"
                        />
                        <CardContent>
-                           <Typography variant="body2" color="textSecondary" component="p">
+                           <Typography variant="body2" style={{color:"#55769A"}} component="p">
                            This impressive paella is a perfect party dish and a fun meal to cook together with your
                            guests. Add 1 cup of frozen peas along with the mussels, if you like.
                            </Typography>
                        </CardContent>
                    </Card>
-                   </Button>
+                   {/* </Button> */}
                    </Link>
                </Paper>
            </Grid>
