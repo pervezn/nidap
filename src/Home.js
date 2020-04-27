@@ -108,7 +108,7 @@ const Home = ()  => {
        {/* {console.log("hereeee")} */}
        { //maybe it doesn't know where to look?
         console.log("canvas is: " + document.getElementById("myCanvas"))}
-       <Balloon/>
+       {/* <Balloon/> */}
        <Paper elevation={0} className={classes.paper1} style={{marginTop: "15vh"}}>
            <Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1} />
            <Typography variant="body1" style={{width: "30vw", marginLeft: "auto", marginRight:"auto", color: "#EEB868", marginTop: "5vh", textAlign: "center"}}>Hey friends! My name’s Nida Pervez. I’m currently wrapping up my final year at Northwestern University, studying Computer Science and Chinese. Check out my past projects, internships, and creative ventures! I hope to connect with you at some level :)</Typography>

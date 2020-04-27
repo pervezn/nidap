@@ -17,6 +17,8 @@ import FactFlow from "./FactFlow";
 import TropeTracker from "./TropeTracker";
 import Internships from "./Internships";
 import Resume from "./Resume";
+import Article1 from "./Articles/Article1"
+import Article2 from "./Articles/Article2"
 
 const defaultProps = {
  style: { width: '10rem', height: '10rem' },
@@ -39,6 +41,9 @@ const App = ()  => {
      <Route exact path="/Writing" component={Writing} />
      <Route exact path="/Travel" component={Travel} />
      <Route exact path="/Resume" component={Resume} />
+     <Route exact path="/Writing/MuslimAmericanCulture" component={Article1} />
+     <Route exact path="/Writing/MyMuslimPride" component={Article2} />
+
      
    </div>
   

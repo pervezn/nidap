@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
        width: "60vw",
        height: "100%",
        marginTop: "20vh",
-       marginLeft: "20vw"
+       marginLeft: "20vw",
    },
    button1: {
        display: "block",
@@ -34,12 +34,14 @@ const useStyles = makeStyles(theme => ({
    media: {
        height: 0,
        // paddingTop: '56.25%', // 16:9
+       color: "#EEB868"
    },
    card1: {
        width:"40%",
        // height: "30vh",
        display: "inline-block",
        margin: "2vw",
+       color: "#EEB868"
    }
 }))
  
@@ -61,10 +63,12 @@ const Writing = ()  => {
            </Grid>
            <Grid item>
                <Paper elevation={0} className={classes.paper2}>
-                   <Card className={classes.card1}>
+                   <Link style={{ textDecoration: "none"}} to="/Writing/MuslimAmericanCulture">
+                    <Button>
+                    <Card className={classes.card1}>
                        <CardHeader
-                           title="Test Article 1"
-                           subheader="September 21, 2019"
+                           title="Muslim-American Culture"
+                           subheader="May 1, 2019"
                        />
                        <CardMedia
                            className={classes.media}
@@ -76,11 +80,14 @@ const Writing = ()  => {
                            guests. Add 1 cup of frozen peas along with the mussels, if you like.
                            </Typography>
                        </CardContent>
-                   </Card>
-                   <Card className={classes.card1}>
+                    </Card>
+                    </Button>
+                   </Link>
+                   <Link style={{ textDecoration: "none"}} to="/Writing/MyMuslimPride">
+                   <Button><Card className={classes.card1}>
                        <CardHeader
-                           title="Test Article 2"
-                           subheader="April 17, 2017"
+                           title="My Muslim Pride"
+                           subheader="May 1, 2019"
                        />
                        <CardMedia
                            className={classes.media}
@@ -92,11 +99,14 @@ const Writing = ()  => {
                            guests. Add 1 cup of frozen peas along with the mussels, if you like.
                            </Typography>
                        </CardContent>
-                   </Card>
-                   <Card className={classes.card1}>
+                   </Card></Button> 
+                   </Link>
+                   <Link style={{ textDecoration: "none"}} to="/Writing/">
+                   <Button>
+                    <Card className={classes.card1}>
                        <CardHeader
-                           title="Test Article 3"
-                           subheader="March 3, 2016"
+                           title="The Thing with Men"
+                           subheader="March 3, 2019"
                        />
                        <CardMedia
                            className={classes.media}
@@ -108,10 +118,13 @@ const Writing = ()  => {
                            guests. Add 1 cup of frozen peas along with the mussels, if you like.
                            </Typography>
                        </CardContent>
-                   </Card>
-                   <Card className={classes.card1}>
+                    </Card>
+                   </Button>
+                   </Link>
+                   <Link style={{ textDecoration: "none"}} to="/Writing/">
+                   <Button><Card className={classes.card1}>
                        <CardHeader
-                           title="Test Article 4"
+                           title="What College Taught Me"
                            subheader="March 14, 2019"
                        />
                        <CardMedia
@@ -125,6 +138,8 @@ const Writing = ()  => {
                            </Typography>
                        </CardContent>
                    </Card>
+                   </Button>
+                   </Link>
                </Paper>
            </Grid>
            <Grid item>
