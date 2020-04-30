@@ -114,6 +114,7 @@ paper2: {
 
 const AppleInternship = ({}) => {
   const classes = useStyles();
+  
 
   return (
     <Paper elevation={0} className={classes.paper7} style={{width: "40vw"}}>

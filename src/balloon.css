@@ -1,0 +1,32 @@
+
+
+.balloon {
+    color: #FF3300;
+    position: absolute;
+    animation-timing-function: linear;
+    animation-name: balloon;
+    animation-duration: 12s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite; 
+ }
+
+#axis:hover .move-up {
+   transform: translate(0,-350px);
+   -webkit-transform: translate(0,-350px);
+   -o-transform: translate(0,-350px); 
+   -moz-transform: translate(0,-350px);
+}
+
+@keyframes balloon {
+    from { 
+       right: calc(50vw - 100px);
+       top: calc(100vh - 40px);
+       font-size: 200px;
+    }
+    to {
+       top: 10px; 
+       color: yellow;
+       font-size: 80px;
+       right: 200px;
+    }
+ }
