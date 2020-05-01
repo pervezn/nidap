@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
    },
    paper2:{
        width: "60vw",
-       height: "100%",
+    //    height: "100%",
        marginTop: "20vh",
        marginLeft: "20vw",
        color:"#55769A",
@@ -65,7 +65,7 @@ const Article1 = ()  => {
            <Grid item>
                <Paper elevation={0} className={classes.paper2}>
                    <Typography variant="h2" style={{color:"#EEB868"}}>My Muslim Pride</Typography>
-                   <Typography variant="h6">May 1, 2019</Typography>
+                   <Typography variant="h6">May 1, 2020</Typography>
                    <Typography variant="body1" style={{textAlign: "left", marginTop: "10vh"}}>
                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
                    </Typography>
