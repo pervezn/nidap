@@ -9,6 +9,7 @@ import {useSpring, animated, useTransition} from 'react-spring'
 // import view from "paper";
 // import Raster from "paper";
 // import styles from "./balloon.css"
+import Balloon from "./styles/Balloon";
 
 // import Balloon from './Balloon';
 
@@ -127,10 +128,11 @@ const Home = ()  => {
 
    return (
      <div className="Home" >
-        {/* <animated.div style={fly} >
-       <img src="../Pictures/balloon1.png"></img>
+        {/* <animated.div style={fly} > */}
+        {/* <div className={styles.balloon}></div> */}
+       {/* <img className={styles.balloon} src="../Pictures/balloon1.png"></img> */}
        
-       </animated.div> */}
+       {/* </animated.div> */}
        {/* <button onClick={() => setToggle(!isToggled)}>Toggle</button> */}
        {/* {console.log("toggle is: ", isToggled)} */}
        {/* <canvas id="myCanvas" style={{top: "0px", left: "0px", width: "100vw",height: "100vh", zIndex: "-5", position: "fixed"}}></canvas> */}
@@ -139,7 +141,7 @@ const Home = ()  => {
         }
         
 
-       {/* <Balloon/> */}
+       
       <Paper elevation={0} className={classes.paper1} style={{marginTop: "15vh"}}>
            <Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1} />
            <Typography variant="body1" style={{width: "30vw", marginLeft: "auto", marginRight:"auto", color: "#EEB868", marginTop: "5vh", textAlign: "center"}}>Hey friends! My name’s Nida Pervez. I’m currently wrapping up my final year at Northwestern University, studying Computer Science and Chinese. Check out my past projects, internships, and creative ventures! I hope to connect with you at some level :)</Typography>
@@ -170,6 +172,7 @@ const Home = ()  => {
         </Button>
 
        </div>
+       <Balloon/>
        <div style={{display: "inline-box", marginTop: "7vh", width: "100%"}}>
     
            <Button className={classes.button1}>

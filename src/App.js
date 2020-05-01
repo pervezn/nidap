@@ -13,8 +13,9 @@ import FactFlow from "./FactFlow";
 import TropeTracker from "./TropeTracker";
 import Internships from "./Internships";
 import Resume from "./Resume";
-import Article1 from "./Articles/Article1"
-import Article2 from "./Articles/Article2"
+import Article1 from "./Articles/Article1";
+import Article2 from "./Articles/Article2";
+
 
 const defaultProps = {
  style: { width: '10rem', height: '10rem' },

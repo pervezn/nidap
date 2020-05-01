@@ -25,7 +25,7 @@
     }
     to {
        top: 10px; 
-       color: yellow;
+       /* color: yellow; */
        font-size: 80px;
        right: 200px;
     }
