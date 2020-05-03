@@ -15,6 +15,7 @@ import Internships from "./Internships";
 import Resume from "./Resume";
 import Article1 from "./Articles/Article1";
 import Article2 from "./Articles/Article2";
+import Default from "./Default";
 
 
 const defaultProps = {
@@ -43,6 +44,7 @@ const App = ()  => {
      <Route exact path="/Writing" component={Writing} />
      <Route exact path="/Travel" component={Travel} />
      <Route exact path="/Resume" component={Resume} />
+     <Route exact path="/Default" component={Default} />
      <Route exact path="/Writing/MuslimAmericanCulture" component={Article1} />
      <Route exact path="/Writing/MyMuslimPride" component={Article2} />
 
