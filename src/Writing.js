@@ -72,7 +72,7 @@ const Writing = ()  => {
                     {/* <Button className={classes.button2}> */}
                     <Card className={classes.card1}>
                        <CardHeader
-                           title="Muslim-American Culture"
+                           title="My Muslim Pride"
                            subheader="May 1, 2019"
                        />
                        <CardMedia
@@ -92,7 +92,7 @@ const Writing = ()  => {
                    {/* <Button className={classes.button2}> */}
                        <Card className={classes.card1}>
                        <CardHeader
-                           title="My Muslim Pride"
+                           title="Muslim-American Culture"
                            subheader="May 1, 2019"
                        />
                        <CardMedia
