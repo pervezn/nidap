@@ -78,7 +78,7 @@ const Projects = ()  => {
    return (
      <div className="Projects">
         <Link style={{textDecoration: "none"}} to="/projects/factflow">
-            <Button className={classes.button2} style={{marginTop: "10vw"}}>
+            <Button className={classes.button2} >
             <Paper elevation={0} className={classes.paper3}>
                 <Paper elevation={0} className={classes.paper5}>
                 <Typography variant="h5" style={{textAlign: "left", margin:"1vw", color:"#EF767A"}}>Fact Flow</Typography>

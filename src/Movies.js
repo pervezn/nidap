@@ -92,7 +92,7 @@ const Movies = ()  => {
     return (
       <div className="Movies">
         <div >
-            <div style={{marginTop: "30vh", height: "50vh"}}>
+            <div style={{marginTop: "20vh", height: "50vh"}}>
                 <Player playsInline src={DL} />
             </div>
 

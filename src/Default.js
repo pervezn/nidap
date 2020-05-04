@@ -16,9 +16,11 @@ import Photos from "./Photos"
 import Writing from "./Writing"
 import Travel from "./Travel"
 import Projects from "./Projects"
+import About from "./About"
+import Resume from "./Resume"
 
 
-const menuItems = { H: "Home", P: "Projects", M: "Movies", P: "Photos", W: "Writing", T: "Travel"}
+const menuItems = { H: "Home", Pr: "Projects", M: "Movies", P: "Photos", W: "Writing", T: "Travel"}
 
 const useStyles = makeStyles({
     paper: {
@@ -50,6 +52,7 @@ const useStyles = makeStyles({
         width: "60vw",
         height: "100%",
         marginLeft: "20vw",
+        marginTop: "20vh"
     },
     paper3:{
       marginTop:"5vh",
@@ -88,9 +91,33 @@ const colortheme = createMuiTheme({
   });
 
 const buttonColor = selected => (
-    console.log("in button color")
-    // selected ? "secondary" : "primary"
+    // console.log("in button color")
+    selected ? "secondary" : "primary"
 );
+
+const ResumeSelector = ({state}) => {
+ 
+  return (
+    <Button 
+    onClick={() => state.setMenu("Resume")} 
+    style={{color: "#EF767A"}}>
+      Resume
+    </Button>
+  )
+
+}
+
+const AboutSelector = ({state}) => {
+  const classes = useStyles();
+
+  return (
+  <Button onClick={ () => state.setMenu("About") }> 
+  {/* <Link style={{color: "#55769A", textDecoration: "none"}} to="/about/"> */}
+    <Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1}/>
+  {/* </Link> */}
+  </Button>
+)};
+
 
 const MenuSelector = ({ state }) => {
     const classes = useStyles();
@@ -110,25 +137,37 @@ return (
 
 const BodySelector = ({state}) => {
   const [currState, setCurrState] = useState();
-  var str=""
+  var test = <React.Fragment/>
   switch(state) {
-    case "Home": setCurrState(<React.Fragment/>)
+    case "Home": 
+      test = <React.Fragment/>
       break;
-    case "Projects": setCurrState(<Projects/>)
+    case "Projects": 
+      test = <Projects/>
       break;
-    case "Movies": setCurrState(<Movies/>)
+    case "Movies": 
+      test = <Movies/>
       break;
-    case "Photos": setCurrState(<Photos/>)
+    case "Photos": 
+      test = <Photos/>
       break;
-    case "Writing": setCurrState(<Writing/>)
-      str="6"
+    case "Writing": 
+      test = <Writing/>
       break;
-    case "Travel": setCurrState(<Travel/>)
+    case "Travel": 
+      test = <Travel/>
       break;
+    case "About":
+      test = <About/>
+      break;
+    case "Resume":
+      test = <Resume/>
+      break;
+
   }
   return (
       <React.Fragment>
-        {str}
+        {test}
       </React.Fragment>
 
   )
@@ -137,13 +176,8 @@ const BodySelector = ({state}) => {
 const Default = ()  => {
     const classes = useStyles();
     const [menu, setMenu] = useState();
-    
-
-    // const handleChange = event => {
-    //   setSpacing(Number(event.target.value));
-    // };
-
-    
+    const [currPage, setCurrPage] = useState();
+   
     return (
       <div className="Default">
         <Grid container style={{height: "100%"}}>
@@ -158,20 +192,20 @@ const Default = ()  => {
                   <BodySelector state={menu} />
                 </Paper>
             </Grid>
-            
             <Grid item>
                 <Paper elevation={0} className={classes.paper1} style={{ top: "0",}}>
                     <Typography variant="h5" style={{color: "#EEB868", marginTop: "5vh"}}>Nida Pervez</Typography>
-                   <Button> <Link style={{color: "#55769A", textDecoration: "none"}} to="/about/"><Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1}/></Link></Button>
+                    <AboutSelector state={{menu, setMenu}}/>
                 </Paper>
             </Grid>
             
         </Grid>
         <div style={{display: "inline-block", bottom: "0", alignContent:"center", marginTop: "25vh", width: "100vw"}}>
            <Button onClick={() => {window.open('https://www.linkedin.com/in/nida-pervez-956a20149/')}} style={{color: "#EF767A"}}>LinkedIn</Button>
-           <Link style={{color: "#55769A", textDecoration: "none"}} to="/Resume"><Button style={{color: "#EF767A"}}>Resume</Button></Link>
+           {/* <Link style={{color: "#55769A", textDecoration: "none"}} to="/Resume"> */}
+             <ResumeSelector state={{menu,setMenu}}/>
+             {/* </Link> */}
            <Button onClick={() => {window.open('https://github.com/pervezn')}} style={{color: "#EF767A"}}>Github</Button>
-           {/* <Button ><Link style={{color: "#EF767A", textDecoration: "none"}} to="/Home">Exit Lala-Land</Link></Button> */}
        </div>
       </div>
       

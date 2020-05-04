@@ -24,10 +24,7 @@ const defaultProps = {
 
 
  
-const App = ()  => {
-  // useEffect(() => {
-  //   {window.scroll(0, 0)}
-  //  },[]);
+const App = ()  => { 
 
 
  return (
