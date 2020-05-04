@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/styles';
 import { Paper, Image, Avatar, Typography, Grid, CardHeader, IconButton, CardContent, CardActions, Button, Card, CardMedia } from '@material-ui/core';
 import {Route, Link} from 'react-router-dom';
 // import { ShareIcon} from '@material-ui/icons/Share';
+
  
 const useStyles = makeStyles(theme => ({
    avatar1: {
@@ -50,94 +51,111 @@ const useStyles = makeStyles(theme => ({
    }
 }))
  
-const Writing = ()  => {
-   const classes = useStyles();
+const DisplayArticle1 = ({state}) => {
+    const classes = useStyles();
+    return (
+        <Button onClick={() => state.setCurrPage("Article1")} className={classes.button2}>
+            <Card className={classes.card1}>
+            <CardHeader
+                title="My Muslim Pride"
+                subheader="May 1, 2019"
+            />
+            <CardMedia
+                className={classes.media}
+                title="Paella dish"
+            />
+            <CardContent>
+                <Typography variant="body2" component="p" style={{color:"#55769A"}}>
+                This impressive paella is a perfect party dish and a fun meal to cook together with your
+                guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                </Typography>
+            </CardContent>
+            </Card>
+        </Button>
+    )
+}
+
+const DisplayArticle2 = ({state}) => {
+    const classes = useStyles();
+    return (
+        <Button onClick={() => state.setCurrPage("Article2")} className={classes.button2}>
+            <Card className={classes.card1}>
+            <CardHeader
+                title="Muslim-American Culture"
+                subheader="May 1, 2019"
+            />
+            <CardMedia
+                className={classes.media}
+                title="Paella dish"
+            />
+            <CardContent>
+                <Typography variant="body2" component="p" style={{color:"#55769A"}}>
+                This impressive paella is a perfect party dish and a fun meal to cook together with your
+                guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                </Typography>
+            </CardContent>
+            </Card>
+        </Button>
+    )
+}
+
+const DisplayArticle3 = ({state}) => {
+    const classes = useStyles();
+    return (
+        <Button onClick={() => state.setCurrPage("Article3")} className={classes.button2}>
+            <Card className={classes.card1}>
+            <CardHeader
+                title="The Thing with Men"
+                subheader="May 1, 2019"
+            />
+            <CardMedia
+                className={classes.media}
+                title="Paella dish"
+            />
+            <CardContent>
+                <Typography variant="body2" component="p" style={{color:"#55769A"}}>
+                This impressive paella is a perfect party dish and a fun meal to cook together with your
+                guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                </Typography>
+            </CardContent>
+            </Card>
+        </Button>
+    )
+}
+
+const DisplayArticle4 = ({state}) => {
+    const classes = useStyles();
+    return (
+        <Button onClick={() => state.setCurrPage("Article4")} className={classes.button2}>
+            <Card className={classes.card1}>
+            <CardHeader
+                title="What College Taught Me"
+                subheader="May 1, 2019"
+            />
+            <CardMedia
+                className={classes.media}
+                title="Paella dish"
+            />
+            <CardContent>
+                <Typography variant="body2" component="p" style={{color:"#55769A"}}>
+                This impressive paella is a perfect party dish and a fun meal to cook together with your
+                guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                </Typography>
+            </CardContent>
+            </Card>
+        </Button>
+    )
+}
+
+const Writing = ({state})  => {
    return (
      <div className="Writing">
-        
-                   <Link style={{ textDecoration: "none"}} to="/Writing/MuslimAmericanCulture">
-                    {/* <Button className={classes.button2}> */}
-                    <Card className={classes.card1}>
-                       <CardHeader
-                           title="My Muslim Pride"
-                           subheader="May 1, 2019"
-                       />
-                       <CardMedia
-                           className={classes.media}
-                           title="Paella dish"
-                       />
-                       <CardContent>
-                           <Typography variant="body2" component="p" style={{color:"#55769A"}}>
-                           This impressive paella is a perfect party dish and a fun meal to cook together with your
-                           guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                           </Typography>
-                       </CardContent>
-                    </Card>
-                    {/* </Button> */}
-                   </Link>
-                   <Link style={{ textDecoration: "none"}} to="/Writing/MyMuslimPride">
-                   {/* <Button className={classes.button2}> */}
-                       <Card className={classes.card1}>
-                       <CardHeader
-                           title="Muslim-American Culture"
-                           subheader="May 1, 2019"
-                       />
-                       <CardMedia
-                           className={classes.media}
-                           title="Paella dish"
-                       />
-                       <CardContent>
-                           <Typography variant="body2" style={{color:"#55769A"}} component="p">
-                           This impressive paella is a perfect party dish and a fun meal to cook together with your
-                           guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                           </Typography>
-                       </CardContent>
-                   </Card>
-                   {/* </Button>  */}
-                   </Link>
-                   <Link style={{ textDecoration: "none"}} to="/Writing/">
-                   {/* <Button className={classes.button2}> */}
-                    <Card className={classes.card1}>
-                       <CardHeader
-                           title="The Thing with Men"
-                           subheader="March 3, 2019"
-                       />
-                       <CardMedia
-                           className={classes.media}
-                           title="Paella dish"
-                       />
-                       <CardContent>
-                           <Typography variant="body2" style={{color:"#55769A"}} component="p">
-                           This impressive paella is a perfect party dish and a fun meal to cook together with your
-                           guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                           </Typography>
-                       </CardContent>
-                    </Card>
-                   {/* </Button> */}
-                   </Link>
-                   <Link style={{ textDecoration: "none"}} to="/Writing/">
-                   {/* <Button className={classes.button2}> */}
-                       <Card className={classes.card1}>
-                       <CardHeader
-                           title="What College Taught Me"
-                           subheader="March 14, 2019"
-                       />
-                       <CardMedia
-                           className={classes.media}
-                           title="Paella dish"
-                       />
-                       <CardContent>
-                           <Typography variant="body2" style={{color:"#55769A"}} component="p">
-                           This impressive paella is a perfect party dish and a fun meal to cook together with your
-                           guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                           </Typography>
-                       </CardContent>
-                   </Card>
-                   {/* </Button> */}
-                   </Link>
-            
+        {console.log("HERE")}
+        <DisplayArticle1 state={state}/>
+        <DisplayArticle2 state={state}/>
+        <DisplayArticle3 state={state}/>
+        <DisplayArticle4 state={state}/>
      </div>
-    
    );
  };
   export default Writing;

@@ -183,54 +183,20 @@ const Internships = ()  => {
  
    return (      
          <div className="Internships">
-            <div>
-           <Grid container>
-               <Grid item>
-               <Paper elevation={0} className={classes.paper1}  style={{top: "0", paddingTop: "5vh"}}>
-                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/">Home</Link></Button>
-                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/projects">Projects</Link></Button>
-                    <Button className={classes.button1} style={{marginLeft: "7vw"}}><Link style={{color: "#55769A", textDecoration: "none"}} to="/projects/factflow">Fact Flow</Link></Button>
-                    <Button className={classes.button1} style={{marginLeft: "7vw"}}><Link style={{color: "#55769A", textDecoration: "none"}} to="/projects/tropetracker">Trope Tracker</Link></Button>
-                    <Button className={classes.button1} style={{marginLeft: "7vw"}}><Link style={{color: "#EEB868", textDecoration: "none"}} to="/projects/internships">internships</Link></Button>
-                    <Button className={classes.button1} ><Link style={{color: "#55769A", textDecoration: "none"}} to="/Movies">Movies</Link></Button>
-                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/Photos">Photos</Link></Button>
-                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/Writing">Writing</Link></Button>
-                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/Travel">Travel</Link></Button>
-                </Paper>
-               </Grid>
-              <Grid item style={{marginLeft: "20vw"}}>
-                <Paper elevation={0} className={classes.paper2}>
-                  <Paper elevation={0} className={classes.paper4} style={{width: "15vw",textAlign:"center"}}>
-                      <img src={"../Pictures/NU.png"} style={{height:"100%",  alignContent:"right"}}/>
-                  </Paper>
-                  <Paper elevation={0} className={classes.paper7} style={{width: "30vw"}}>
-                    <Paper elevation={0} className={classes.paper3}>
-                      <Paper elevation={0} className={classes.paper4} style={{width: "35vw"}}>
-                          <Typography variant="h3" style={{marginTop: "0px", paddingTop: "0px", color: "#EF767A"}}>Internships</Typography>
-                      </Paper>
-                    </Paper>
-                  </Paper >
-                  <Paper elevation={0} className={classes.paper8}>
+          <Paper elevation={0} className={classes.paper4} style={{width: "15vw",textAlign:"center"}}>
+              <img src={"../Pictures/NU.png"} style={{height:"100%",  alignContent:"right"}}/>
+          </Paper>
+          <Paper elevation={0} className={classes.paper7} style={{width: "30vw"}}>
+            <Paper elevation={0} className={classes.paper3}>
+              <Paper elevation={0} className={classes.paper4} style={{width: "35vw"}}>
+                  <Typography variant="h3" style={{marginTop: "0px", paddingTop: "0px", color: "#EF767A"}}>Internships</Typography>
+              </Paper>
+            </Paper>
+          </Paper >
+          <Paper elevation={0} className={classes.paper8}>
                     <YearSelector state={{year, setYear}} />
                     {year === "Summer 2019" ? <AppleInternship/>:<AllstateInternship/>}
                   </Paper>
-                </Paper>
-              </Grid>
-               <Grid item>
-                   <Paper elevation={0} className={classes.paper1} style={{top: "0"}}>
-                      <Typography variant="h5" style={{color: "#EEB868", marginTop: "5vh"}}>Nida Pervez</Typography>
-                       <Button> <Link style={{color: "#55769A", textDecoration: "none"}} to="/about"><Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1}/></Link></Button>
-                       
-                   </Paper>
-               </Grid>
-           </Grid>
-           </div>
-           <div style={{display: "inline-block", bottom: "0", alignContent:"center", marginTop: "15vh"}}>
-               <Button onClick={() => {window.open('https://www.linkedin.com/in/nida-pervez-956a20149/')}} style={{color: "#EF767A"}}>LinkedIn</Button>
-               <Link style={{color: "#55769A", textDecoration: "none"}} to="/Resume"><Button style={{color: "#EF767A"}}>Resume</Button></Link>
-               <Button onClick={() => {window.open('https://github.com/pervezn')}} style={{color: "#EF767A"}}>Github</Button>
-               {/* <Button ><Link style={{color: "#EF767A", textDecoration: "none"}} to="/Home">Exit Lala-Land</Link></Button> */}
-           </div>
          </div>
       
        );

@@ -92,44 +92,27 @@ const TropeTracker = ()  => {
  
    return (
          <div className="TropeTracker">
-            <div>
-           <Grid container>
-               <Grid item>
-               <Paper elevation={0} className={classes.paper1}  style={{top: "0", paddingTop: "5vh"}}>
-                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/">Home</Link></Button>
-                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/projects">Projects</Link></Button>
-                    <Button className={classes.button1} style={{marginLeft: "7vw"}}><Link style={{color: "#55769A", textDecoration: "none"}} to="/projects/factflow">Fact Flow</Link></Button>
-                    <Button className={classes.button1} style={{marginLeft: "7vw"}}><Link style={{color: "#EEB868", textDecoration: "none"}} to="/projects/tropetracker">Trope Tracker</Link></Button>
-                    <Button className={classes.button1} style={{marginLeft: "7vw"}}><Link style={{color: "#55769A", textDecoration: "none"}} to="/projects/internships">internships</Link></Button>
-                    <Button className={classes.button1} ><Link style={{color: "#55769A", textDecoration: "none"}} to="/Movies">Movies</Link></Button>
-                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/Photos">Photos</Link></Button>
-                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/Writing">Writing</Link></Button>
-                    <Button className={classes.button1}><Link style={{color: "#55769A", textDecoration: "none"}} to="/Travel">Travel</Link></Button>
-                </Paper>
-               </Grid>
-              <Grid item style={{marginLeft: "20vw"}}>
-                <Paper elevation={0} className={classes.paper2}>
-                  <Paper elevation={0} className={classes.paper4} style={{width: "15vw",textAlign:"center"}}>
-                      <img src={"../Pictures/TT9.png"} style={{height:"100%",  alignContent:"right"}}/>
-                  </Paper>
-                  <Paper elevation={0} className={classes.paper4} style={{width: "35vw"}}>
-                      <Typography variant="h3" style={{marginTop: "0px", paddingTop: "0px", color: "#EF767A"}}>Northwestern University: Trope Tracker</Typography>
-                  </Paper>
-                  <Paper elevation={0} className={classes.paper7} style={{width: "11vw" }}>
-                    <Typography variant="body2" style={{paddingBottom:"1vw",fontWeight:"bold"}}>Winter 2019</Typography>
-                    <Typography variant="body2" style={{fontWeight:"bold"}}>Team Members:</Typography>
-                    <Typography variant="body2">Brendan Labadie</Typography>
-                    <Typography variant="body2">Remy Afong</Typography>
-                    <Typography variant="body2">Albert Dotson</Typography>
-                 </Paper>
-                  <Paper elevation={0} className={classes.paper7} style={{width: "30vw"}}>
-                      <Typography variant="body1" style={{paddingBottom:"2vw",paddingTop:"4vw"}}>Practicum in Intelligent Information Systems is a class offered at Northwestern that focuses on areas of information access, management, capture, or retrieval. Within these focus-areas, students are expected to present a project definition, a technology selection, data collection, implementation, and project management.</Typography>
-                      <Typography variant="h6" style={{paddingBottom:"2vw",}}>Project Overview</Typography>
-                      <Typography variant="body1"  >
-                      Trope Tracker is a tool that discovers trope-article association via crowdsourced Twitter data. A trope is figurative or metaphorical use of a word or expression. Some common tropes are “a needle in a haystack”, or “David vs. Goliath”. Our goal is to identify tropes or trope ideas in articles and vice versa; to find articles by looking up tropes. The idea behind Trope Tracker is to see how people are using tropes and how common they are today.
-                      </Typography>
-                  </Paper >
-                  <Paper elevation={0} className={classes.paper8}>
+          <Paper elevation={0} className={classes.paper4} style={{width: "15vw",textAlign:"center"}}>
+              <img src={"../Pictures/TT9.png"} style={{height:"100%",  alignContent:"right"}}/>
+          </Paper>
+          <Paper elevation={0} className={classes.paper4} style={{width: "35vw"}}>
+              <Typography variant="h3" style={{marginTop: "0px", paddingTop: "0px", color: "#EF767A"}}>Northwestern University: Trope Tracker</Typography>
+          </Paper>
+          <Paper elevation={0} className={classes.paper7} style={{width: "11vw" }}>
+            <Typography variant="body2" style={{paddingBottom:"1vw",fontWeight:"bold"}}>Winter 2019</Typography>
+            <Typography variant="body2" style={{fontWeight:"bold"}}>Team Members:</Typography>
+            <Typography variant="body2">Brendan Labadie</Typography>
+            <Typography variant="body2">Remy Afong</Typography>
+            <Typography variant="body2">Albert Dotson</Typography>
+          </Paper>
+          <Paper elevation={0} className={classes.paper7} style={{width: "30vw"}}>
+              <Typography variant="body1" style={{paddingBottom:"2vw",paddingTop:"4vw"}}>Practicum in Intelligent Information Systems is a class offered at Northwestern that focuses on areas of information access, management, capture, or retrieval. Within these focus-areas, students are expected to present a project definition, a technology selection, data collection, implementation, and project management.</Typography>
+              <Typography variant="h6" style={{paddingBottom:"2vw",}}>Project Overview</Typography>
+              <Typography variant="body1"  >
+              Trope Tracker is a tool that discovers trope-article association via crowdsourced Twitter data. A trope is figurative or metaphorical use of a word or expression. Some common tropes are “a needle in a haystack”, or “David vs. Goliath”. Our goal is to identify tropes or trope ideas in articles and vice versa; to find articles by looking up tropes. The idea behind Trope Tracker is to see how people are using tropes and how common they are today.
+              </Typography>
+          </Paper >
+          <Paper elevation={0} className={classes.paper8}>
                       <Typography variant="body1">Example Use Cases</Typography>
                       <Typography variant="body1" style={{marginTop:"vw",}}>1. User wants to know what a story is about before reading it, e.g. news story about an individual winning a lawsuit against Facebook summarizes as David vs. Goliath</Typography>
                       <Typography variant="body1" style={{marginTop:"1vw",}}>2. User wants to view stories classified as the same trope, e.g. English teachers design a literary analysis exercise for students to compare and contrast stories labeled as the same trope (characters, plot, etc.)</Typography>
@@ -159,23 +142,6 @@ const TropeTracker = ()  => {
                       <img src={"../Pictures/TT8.png"} style={{width:"100%",  alignContent:"right", marginTop: "2vw"}}/>
                       <Button onClick={() => {window.open('https://trope-tracker-62549.firebaseapp.com/#/')}} style={{color: "#EEB868"}}><Typography variant="body1" style={{marginTop: "5vh"}}>Visit Trope Tracker</Typography></Button>
                   </Paper>
-                </Paper>
-              </Grid>
-               <Grid item>
-                   <Paper elevation={0} className={classes.paper1} style={{top: "0"}}>
-                      <Typography variant="h5" style={{color: "#EEB868", marginTop: "5vh"}}>Nida Pervez</Typography>
-                       <Button> <Link style={{color: "#55769A", textDecoration: "none"}} to="/about"><Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1}/></Link></Button>
-                       
-                   </Paper>
-               </Grid>
-           </Grid>
-           </div>
-           <div style={{display: "inline-block", bottom: "0", alignContent:"center", marginTop: "15vh"}}>
-               <Button onClick={() => {window.open('https://www.linkedin.com/in/nida-pervez-956a20149/')}} style={{color: "#EF767A"}}>LinkedIn</Button>
-               <Link style={{color: "#55769A", textDecoration: "none"}} to="/Resume"><Button style={{color: "#EF767A"}}>Resume</Button></Link>
-               <Button onClick={() => {window.open('https://github.com/pervezn')}} style={{color: "#EF767A"}}>Github</Button>
-               {/* <Button ><Link style={{color: "#EF767A", textDecoration: "none"}} to="/Home">Exit Lala-Land</Link></Button> */}
-           </div>
          </div>
          );
      };

@@ -72,47 +72,61 @@ const useStyles = makeStyles({
  
 })
  
+const FactFlow = ({state}) => {
+  const classes = useStyles();
+  return (
+  <Button onClick={() => state.setCurrPage("FactFlow")} className={classes.button2} >
+    <Paper elevation={0} className={classes.paper3}>
+        <Paper elevation={0} className={classes.paper5}>
+        <Typography variant="h5" style={{textAlign: "left", margin:"1vw", color:"#EF767A"}}>Fact Flow</Typography>
+        </Paper>  
+        <Paper elevation={0} className={classes.paper6}>
+        <img src={"../Pictures/FactFlow.png"} style={{height:"100%",  alignContent:"right"}}/>
+        </Paper>
+    </Paper>
+  </Button>
+  )
+}
 
-const Projects = ()  => {
+const TropeTracker = ({state}) => {
+  const classes = useStyles();
+  return (
+    <Button onClick={() => state.setCurrPage("TropeTracker")} className={classes.button2} style={{marginTop: "10vh"}}>
+      <Paper elevation={0} className={classes.paper3}>
+          <Paper elevation={0} className={classes.paper5}>
+          <Typography variant="h5" style={{textAlign: "left", margin:"1vw", color:"#EF767A"}}>Trope Tracker</Typography>
+          </Paper>  
+          <Paper elevation={0} className={classes.paper6}>
+          <img src={"../Pictures/TropeTracker.png"} style={{height:"100%", alignContent:"right"}}/>
+          </Paper>
+      </Paper>
+    </Button>
+  )
+}
+
+const Internships = ({state}) => {
+  const classes = useStyles();
+  return (
+    <Button onClick={() => state.setCurrPage("Internships")}  className={classes.button2} style={{marginTop: "10vh"}}>
+      <Paper elevation={0} className={classes.paper3}>
+          <Paper elevation={0} className={classes.paper5}>
+          <Typography  style={{textAlign: "left", margin:"1vw", color:"#EF767A"}}>Past Internships</Typography>
+          </Paper>  
+          <Paper elevation={0} className={classes.paper6}>
+          <img src={"../Pictures/Apple.png"} style={{height:"100%", alignContent:"right"}}/>
+          </Paper>
+      </Paper>
+    </Button>
+  )
+}
+
+const Projects = ({state})  => {
    const classes = useStyles();
    return (
      <div className="Projects">
-        <Link style={{textDecoration: "none"}} to="/projects/factflow">
-            <Button className={classes.button2} >
-            <Paper elevation={0} className={classes.paper3}>
-                <Paper elevation={0} className={classes.paper5}>
-                <Typography variant="h5" style={{textAlign: "left", margin:"1vw", color:"#EF767A"}}>Fact Flow</Typography>
-                </Paper>  
-                <Paper elevation={0} className={classes.paper6}>
-                <img src={"../Pictures/FactFlow.png"} style={{height:"100%",  alignContent:"right"}}/>
-                </Paper>
-            </Paper>
-            </Button>
-        </Link>
-        <Link style={{textDecoration: "none"}} to="/projects/tropetracker">
-            <Button className={classes.button2} style={{marginTop: "10vh"}}>
-            <Paper elevation={0} className={classes.paper3}>
-                <Paper elevation={0} className={classes.paper5}>
-                <Typography variant="h5" style={{textAlign: "left", margin:"1vw", color:"#EF767A"}}>Trope Tracker</Typography>
-                </Paper>  
-                <Paper elevation={0} className={classes.paper6}>
-                <img src={"../Pictures/TropeTracker.png"} style={{height:"100%", alignContent:"right"}}/>
-                </Paper>
-            </Paper>
-            </Button>
-        </Link>
-        <Link style={{textDecoration: "none", marginTop: "10vh"}} to="/projects/internships">
-            <Button className={classes.button2} style={{marginTop: "10vh"}}>
-            <Paper elevation={0} className={classes.paper3}>
-                <Paper elevation={0} className={classes.paper5}>
-                <Typography  style={{textAlign: "left", margin:"1vw", color:"#EF767A"}}>Past Internships</Typography>
-                </Paper>  
-                <Paper elevation={0} className={classes.paper6}>
-                <img src={"../Pictures/Apple.png"} style={{height:"100%", alignContent:"right"}}/>
-                </Paper>
-            </Paper>
-            </Button>
-        </Link>
+        <FactFlow state={state} />
+        <TropeTracker state={state}/>
+        <Internships state={state}/>
      </div>
     
    );

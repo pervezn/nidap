@@ -18,6 +18,11 @@ import Travel from "./Travel"
 import Projects from "./Projects"
 import About from "./About"
 import Resume from "./Resume"
+import Article1 from "./Articles/Article1"
+import Article2 from "./Articles/Article2"
+import FactFlow from "./FactFlow"
+import TropeTracker from "./TropeTracker"
+import Internships from "./Internships"
 
 
 const menuItems = { H: "Home", Pr: "Projects", M: "Movies", P: "Photos", W: "Writing", T: "Travel"}
@@ -79,16 +84,17 @@ const useStyles = makeStyles({
     button1: {
         display: "block",
         marginLeft: "5vw",
+        color: "#55769A"
     }
 
 });
 
 const colortheme = createMuiTheme({
-    palette: {
-      primary: { main: "#55769A", contrastText: "#fff" },
-      secondary: { main: "#EEB868", contrastText: "#fff" }
-    }
-  });
+  palette: { 
+    primary: { main: "#55769A", contrastText: "#fff" },
+    secondary: { main: "#EEB868", contrastText: "#fff" }
+  }
+});
 
 const buttonColor = selected => (
     // console.log("in button color")
@@ -99,7 +105,7 @@ const ResumeSelector = ({state}) => {
  
   return (
     <Button 
-    onClick={() => state.setMenu("Resume")} 
+    onClick={() => state.setCurrPage("Resume")} 
     style={{color: "#EF767A"}}>
       Resume
     </Button>
@@ -111,7 +117,7 @@ const AboutSelector = ({state}) => {
   const classes = useStyles();
 
   return (
-  <Button onClick={ () => state.setMenu("About") }> 
+  <Button onClick={ () => state.setCurrPage("About") }> 
   {/* <Link style={{color: "#55769A", textDecoration: "none"}} to="/about/"> */}
     <Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1}/>
   {/* </Link> */}
@@ -121,29 +127,31 @@ const AboutSelector = ({state}) => {
 
 const MenuSelector = ({ state }) => {
     const classes = useStyles();
-
-return (
+    return (
     <MuiThemeProvider theme={colortheme}>
       { Object.values(menuItems)
-          .map(value => <Button key={value} 
-            className={classes.button1}
-            color={ buttonColor(value === state.menu) }
-            onClick={ () => state.setMenu(value) }
-            >{ value }</Button>
-          )
+        .map(value => 
+        <Button 
+          key={value} 
+          className={classes.button1}
+          color={ buttonColor(value === state.currPage) }
+          onClick={ () => state.setCurrPage(value) }>
+          { value }
+        </Button>
+        )
       }
     </MuiThemeProvider>
 )};
 
-const BodySelector = ({state}) => {
-  const [currState, setCurrState] = useState();
+const BodySelector = ({currState}) => {
+  // const [currState, setCurrState] = useState();
   var test = <React.Fragment/>
-  switch(state) {
+  switch(currState.currPage) {
     case "Home": 
       test = <React.Fragment/>
       break;
     case "Projects": 
-      test = <Projects/>
+      test = <Projects state={currState}/>
       break;
     case "Movies": 
       test = <Movies/>
@@ -152,7 +160,7 @@ const BodySelector = ({state}) => {
       test = <Photos/>
       break;
     case "Writing": 
-      test = <Writing/>
+      test = <Writing state={currState} />
       break;
     case "Travel": 
       test = <Travel/>
@@ -163,7 +171,20 @@ const BodySelector = ({state}) => {
     case "Resume":
       test = <Resume/>
       break;
-
+    case "Article1":
+      test = <Article1/>
+      break;
+    case "Article2":
+      test = <Article2/>
+      break;
+    case "FactFlow":
+      test = <FactFlow/>
+      break;
+    case "TropeTracker":
+      test = <TropeTracker/>
+      break;
+    case "Internships":
+      test = <Internships/>
   }
   return (
       <React.Fragment>
@@ -175,27 +196,27 @@ const BodySelector = ({state}) => {
 
 const Default = ()  => {
     const classes = useStyles();
-    const [menu, setMenu] = useState();
     const [currPage, setCurrPage] = useState();
+    // const [currPage, setCurrPage] = useState();
    
     return (
       <div className="Default">
         <Grid container style={{height: "100%"}}>
             <Grid item>
                 <Paper elevation={0} className={classes.paper1}  style={{top: "0", paddingTop: "5vh"}}> 
-                    <MenuSelector state={{menu, setMenu}} />
+                    <MenuSelector state={{currPage, setCurrPage}} />
                 </Paper>
             </Grid>
             <Grid item>
                 <Paper elevation={0} className={classes.paper2}>
-                  {console.log("menu is: " + menu)}
-                  <BodySelector state={menu} />
+                  {console.log("menu is: " + currPage)}
+                  <BodySelector currState={{currPage, setCurrPage}} />
                 </Paper>
             </Grid>
             <Grid item>
                 <Paper elevation={0} className={classes.paper1} style={{ top: "0",}}>
                     <Typography variant="h5" style={{color: "#EEB868", marginTop: "5vh"}}>Nida Pervez</Typography>
-                    <AboutSelector state={{menu, setMenu}}/>
+                    <AboutSelector state={{currPage, setCurrPage}}/>
                 </Paper>
             </Grid>
             
@@ -203,7 +224,7 @@ const Default = ()  => {
         <div style={{display: "inline-block", bottom: "0", alignContent:"center", marginTop: "25vh", width: "100vw"}}>
            <Button onClick={() => {window.open('https://www.linkedin.com/in/nida-pervez-956a20149/')}} style={{color: "#EF767A"}}>LinkedIn</Button>
            {/* <Link style={{color: "#55769A", textDecoration: "none"}} to="/Resume"> */}
-             <ResumeSelector state={{menu,setMenu}}/>
+             <ResumeSelector state={{currPage, setCurrPage}}/>
              {/* </Link> */}
            <Button onClick={() => {window.open('https://github.com/pervezn')}} style={{color: "#EF767A"}}>Github</Button>
        </div>
