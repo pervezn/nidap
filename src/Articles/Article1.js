@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
 const Article1 = ()  => {
    const classes = useStyles();
    return (
-     <div className="Article1">
+     <div className="Article1" style={{color: "#55769A"}}>
         <Typography variant="h2"style={{color:"#EEB868"}}>My Muslim Pride</Typography>
         <Typography variant="h6">May 1, 2019</Typography>
         <Typography variant="body1" style={{textAlign: "left", marginTop: "10vh"}}>

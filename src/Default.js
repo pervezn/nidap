@@ -148,7 +148,7 @@ const BodySelector = ({currState}) => {
   var test = <React.Fragment/>
   switch(currState.currPage) {
     case "Home": 
-      test = <React.Fragment/>
+      // test = <Link style={{color: "#55769A", textDecoration: "none"}} to="/"></Link>
       break;
     case "Projects": 
       test = <Projects state={currState}/>
@@ -194,10 +194,9 @@ const BodySelector = ({currState}) => {
   )
 }
 
-const Default = ()  => {
+const Default = ({state})  => {
     const classes = useStyles();
     const [currPage, setCurrPage] = useState();
-    // const [currPage, setCurrPage] = useState();
    
     return (
       <div className="Default">
@@ -219,7 +218,6 @@ const Default = ()  => {
                     <AboutSelector state={{currPage, setCurrPage}}/>
                 </Paper>
             </Grid>
-            
         </Grid>
         <div style={{display: "inline-block", bottom: "0", alignContent:"center", marginTop: "25vh", width: "100vw"}}>
            <Button onClick={() => {window.open('https://www.linkedin.com/in/nida-pervez-956a20149/')}} style={{color: "#EF767A"}}>LinkedIn</Button>

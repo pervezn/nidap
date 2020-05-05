@@ -108,9 +108,114 @@ const useStyles = makeStyles({
 //   )
 // }
 
+const ToProjects = ({state}) => {
+  const classes = useStyles();
+  return (
+    <Button onClick={() => state.setCurrPage("Projects")} className={classes.button1}>
+      <Link style={{color: "#55769A", textDecoration: "none"}} to={{
+                                                                    pathname: "/Default",
+                                                                    data: state // your data array of objects
+                                                                  }}>
+        <img src={"../Pictures/ProjectIcon.png"} style={{width:"50%"}}/>
+        <Typography>Projects</Typography>
+      </Link>
+    </Button>
+  )
+}
+
+const ToAbout = ({state}) => {
+  const classes = useStyles();
+  return (
+    <Button onClick={() => state.setCurrPage("About")} className={classes.button1} >
+      <Link style={{color: "#55769A", textDecoration: "none"}} to={{
+                                                                    pathname: "/Default",
+                                                                    data: state // your data array of objects
+                                                                  }}>
+        <img src={"../Pictures/AboutMeIcon.png"} style={{width:"40%"}}/>
+        <Typography>About</Typography>
+      </Link>
+    </Button>
+  )
+}
+
+const ToResume = ({state}) => {
+  const classes = useStyles();
+  return (
+    <Button onClick={() => state.setCurrPage("Resume")} className={classes.button1} >
+      <Link style={{color: "#55769A", textDecoration: "none"}} to={{
+                                                                    pathname: "/Default",
+                                                                    data: state // your data array of objects
+                                                                  }}>
+        <img src={"../Pictures/ResumeIcon.png"} style={{width:"30%"}}/>
+        <Typography>Resume</Typography>
+      </Link>
+    </Button>
+  )
+}
+
+const ToMovies = ({state}) => {
+  const classes = useStyles();
+  return (
+    <Button onClick={() => state.setCurrPage("Movies")} className={classes.button1}>
+        <Link style={{color: "#55769A", textDecoration: "none"}} to={{
+                                                                    pathname: "/Default",
+                                                                    data: state // your data array of objects
+                                                                  }}>
+        <img src={"../Pictures/MoviesIcon.png"} style={{width:"40%"}}/>
+          <Typography>Movies</Typography>
+        </Link>
+    </Button>
+  )
+}
+
+const ToPhotos = ({state}) => {
+  const classes = useStyles();
+  return (
+    <Button onClick={() => state.setCurrPage("Photos")} className={classes.button1}>
+          <Link style={{color: "#55769A", textDecoration: "none"}} to={{
+                                                                    pathname: "/Default",
+                                                                    data: state // your data array of objects
+                                                                  }}>
+          <img src={"../Pictures/PhotosIcon.png"} style={{width:"50%"}}/>
+          <Typography>Photos</Typography>
+          </Link>
+        </Button>
+   )
+}
+
+const ToWriting = ({state}) => {
+  const classes = useStyles();
+  return (
+    <Button onClick={() => state.setCurrPage("Writing")} className={classes.button1}>
+      <Link style={{color: "#55769A", textDecoration: "none"}} to={{
+                                                                    pathname: "/Default",
+                                                                    data: state // your data array of objects
+                                                                  }}>
+      <img src={"../Pictures/WritingIcon.png"} style={{width:"30%"}}/>
+      <Typography>Writing</Typography>
+      </Link>
+  </Button>
+  )
+}
+
+const ToTravel = ({state}) => {
+  const classes = useStyles();
+  return (
+    <Button onClick={() => state.setCurrPage("Travel")} className={classes.button1}>
+      <Link style={{color: "#55769A", textDecoration: "none"}} to={{
+                                                                    pathname: "/Default",
+                                                                    data: state // your data array of objects
+                                                                  }}>
+        <img src={"../Pictures/TravelIcon.png"} style={{width:"40%"}}/>
+        <Typography>Travel</Typography>
+      </Link>
+    </Button>
+  )
+}
 
 const Home = ()  => {
    const classes = useStyles();
+   const [currPage, setCurrPage] = useState();
    const [isToggled, setToggle] = useState(false);
    const fade = useSpring({from: { opacity: 0 }, opacity: 1})
    const fly = useSpring({
@@ -119,93 +224,28 @@ const Home = ()  => {
     //  transform: isToggled ? 'translate3d(0,-100,0)' : 'translate3d(0,100vh,0)' 
     })
 
-  //  const transitions = useTransition(items, item => item.key, {
-  //   from: { transform: 'translate3d(0,0,0)' },
-  //   // enter: { transform: 'translate3d(0,0px,0)' },
-  //   leave: { transform: 'translate3d(0,400px,0)' },
-  //   })
-  //  console.log(fade)
 
    return (
      <div className="Home" >
-        {/* <animated.div style={fly} > */}
-        {/* <div className={styles.balloon}></div> */}
-       {/* <img className={styles.balloon} src="../Pictures/balloon1.png"></img> */}
-       
-       {/* </animated.div> */}
-       {/* <button onClick={() => setToggle(!isToggled)}>Toggle</button> */}
-       {/* {console.log("toggle is: ", isToggled)} */}
-       {/* <canvas id="myCanvas" style={{top: "0px", left: "0px", width: "100vw",height: "100vh", zIndex: "-5", position: "fixed"}}></canvas> */}
-       {/* {console.log("hereeee")} */}
-       { //maybe it doesn't know where to look?
-        }
-        
-
-       
       <Paper elevation={0} className={classes.paper1} style={{marginTop: "15vh"}}>
            <Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1} />
            <Typography variant="body1" style={{width: "30vw", marginLeft: "auto", marginRight:"auto", color: "#EEB868", marginTop: "5vh", textAlign: "center"}}>Hey friends! My name’s Nida Pervez. I’m currently wrapping up my final year at Northwestern University, studying Computer Science and Chinese. Check out my past projects, internships, and creative ventures! I hope to connect with you at some level :)</Typography>
        </Paper>
-       
       
        <div style={{display: "inline-box", marginTop: "15vh", width: "100%",}}>
-
-        <Button className={classes.button1}>
-          <Link style={{color: "#55769A", textDecoration: "none"}} to="/projects">
-            <img src={"../Pictures/ProjectIcon.png"} style={{width:"50%"}}/>
-            <Typography>Projects</Typography>
-          </Link>
-        </Button>
-
-        <Button className={classes.button1} >
-          <Link style={{color: "#55769A", textDecoration: "none"}} to="/about">
-            <img src={"../Pictures/AboutMeIcon.png"} style={{width:"40%"}}/>
-            <Typography>About</Typography>
-          </Link>
-        </Button>
-
-        <Button className={classes.button1} >
-          <Link style={{color: "#55769A", textDecoration: "none"}} to="/Resume">
-            <img src={"../Pictures/ResumeIcon.png"} style={{width:"30%"}}/>
-            <Typography>Resume</Typography>
-          </Link>
-        </Button>
-
+        <ToProjects state={{currPage, setCurrPage}}/>
+        <ToAbout state={{currPage, setCurrPage}}/>
+        <ToResume state={{currPage, setCurrPage}}/>
        </div>
        <Balloon/>
        <div style={{display: "inline-box", marginTop: "7vh", width: "100%"}}>
-    
-           <Button className={classes.button1}>
-             <Link style={{color: "#55769A", textDecoration: "none"}} to="/Movies">
-             <img src={"../Pictures/MoviesIcon.png"} style={{width:"40%"}}/>
-               <Typography>Movies</Typography>
-              </Link>
-          </Button>
-
-          <Button className={classes.button1}>
-            <Link style={{color: "#55769A", textDecoration: "none"}} to="/Photos">
-            <img src={"../Pictures/PhotosIcon.png"} style={{width:"50%"}}/>
-            <Typography>Photos</Typography>
-            </Link>
-          </Button>
-
-          <Button className={classes.button1}>
-            <Link style={{color: "#55769A", textDecoration: "none"}} to="/Writing">
-            <img src={"../Pictures/WritingIcon.png"} style={{width:"30%"}}/>
-            <Typography>Writing</Typography>
-            </Link>
-          </Button>
-           
+        <ToMovies state={{currPage, setCurrPage}}/>
+        <ToPhotos state={{currPage, setCurrPage}}/>
+        <ToWriting state={{currPage, setCurrPage}}/>
        </div>
        <div style={{display: "inline-box", marginTop: "3vh", width: "100%", marginBottom: "7vh"}}> 
-          <Button className={classes.button1}>
-            <Link style={{color: "#55769A", textDecoration: "none"}} to="/Travel">
-            <img src={"../Pictures/TravelIcon.png"} style={{width:"40%"}}/>
-            <Typography>Travel</Typography>
-              
-            </Link>
-          </Button>
-   </div> 
+        <ToTravel state={{currPage, setCurrPage}}/>
+       </div> 
      </div>
     
    );
