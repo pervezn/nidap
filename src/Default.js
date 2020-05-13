@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import { makeStyles } from '@material-ui/styles';
 import { Paper, Image, Avatar, Typography, Box, Grid, GridListTile, GridList, Button, Card, CardMedia } from '@material-ui/core';
-import {Route, Link} from 'react-router-dom';
+import {Route, Link, useLocation} from 'react-router-dom';
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 import "../node_modules/video-react/dist/video-react.css";
 import 'firebase/firestore';
@@ -25,7 +25,7 @@ import TropeTracker from "./TropeTracker"
 import Internships from "./Internships"
 
 
-const menuItems = { H: "Home", Pr: "Projects", M: "Movies", P: "Photos", W: "Writing", T: "Travel"}
+const menuItems = { Pr: "Projects", M: "Movies", P: "Photos", W: "Writing", T: "Travel"}
 
 const useStyles = makeStyles({
     paper: {
@@ -129,6 +129,11 @@ const MenuSelector = ({ state }) => {
     const classes = useStyles();
     return (
     <MuiThemeProvider theme={colortheme}>
+      <Button className={classes.button1} color="primary">
+        <Link style={{textDecoration: "none", color: "#55769A" }}exact to="/" >
+          Home
+        </Link>
+      </Button>
       { Object.values(menuItems)
         .map(value => 
         <Button 
@@ -148,7 +153,7 @@ const BodySelector = ({currState}) => {
   var test = <React.Fragment/>
   switch(currState.currPage) {
     case "Home": 
-      // test = <Link style={{color: "#55769A", textDecoration: "none"}} to="/"></Link>
+      test = <Projects state={currState}/>
       break;
     case "Projects": 
       test = <Projects state={currState}/>
@@ -196,7 +201,12 @@ const BodySelector = ({currState}) => {
 
 const Default = ({state})  => {
     const classes = useStyles();
-    const [currPage, setCurrPage] = useState();
+    const location = useLocation();
+    const [currPage, setCurrPage] = useState(location.data);
+    // const [currPage, setCurrPage] = useState(location ? location.data : );
+    {console.log("In Home: location.state.data is: " + location.data)}
+    console.log(location)
+    // console.log("props.location.state.data is: "+ tstate.state.currPage)
    
     return (
       <div className="Default">
