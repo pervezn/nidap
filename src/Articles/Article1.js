@@ -1,51 +1,51 @@
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import '../App.css';
-import { makeStyles } from '@material-ui/styles';
-import { Paper, Image, Avatar, Typography, Grid, CardHeader, IconButton, CardContent, CardActions, Button, Card, CardMedia } from '@material-ui/core';
-import {Route, Link} from 'react-router-dom';
+// import { makeStyles } from '@material-ui/styles';
+import { Typography,  Button, } from '@material-ui/core';
+// import {Route, Link} from 'react-router-dom';
 // import { ShareIcon} from '@material-ui/icons/Share';
  
-const useStyles = makeStyles(theme => ({
-   avatar1: {
-       width: 100,
-       height: 100,
-       marginTop: "1vw",
-       // display: "flex",
-       // justifyContent: "center"
-       marginLeft: "auto",
-       marginRight:"auto"
-   },
-   paper1:{
-       width: "20vw",
-       height: "200px",
-       position: "fixed",
-   },
-   paper2:{
-       width: "60vw",
-    //    height: "100%",
-       marginTop: "20vh",
-       marginLeft: "20vw",
-       color:"#55769A"
-   },
-   button1: {
-       display: "block",
-       marginLeft: "5vw",
-   },
-//    media: {
-//        height: 0,
-//        // paddingTop: '56.25%', // 16:9
+// const useStyles = makeStyles(theme => ({
+//    avatar1: {
+//        width: 100,
+//        height: 100,
+//        marginTop: "1vw",
+//        // display: "flex",
+//        // justifyContent: "center"
+//        marginLeft: "auto",
+//        marginRight:"auto"
 //    },
-//    card1: {
-//        width:"40%",
-//        // height: "30vh",
-//        display: "inline-block",
-//        margin: "2vw",
-//    }
-}))
+//    paper1:{
+//        width: "20vw",
+//        height: "200px",
+//        position: "fixed",
+//    },
+//    paper2:{
+//        width: "60vw",
+//     //    height: "100%",
+//        marginTop: "20vh",
+//        marginLeft: "20vw",
+//        color:"#55769A"
+//    },
+//    button1: {
+//        display: "block",
+//        marginLeft: "5vw",
+//    },
+// //    media: {
+// //        height: 0,
+// //        // paddingTop: '56.25%', // 16:9
+// //    },
+// //    card1: {
+// //        width:"40%",
+// //        // height: "30vh",
+// //        display: "inline-block",
+// //        margin: "2vw",
+// //    }
+// }))
  
 const Article1 = ()  => {
-   const classes = useStyles();
+//    const classes = useStyles();
    return (
      <div className="Article1" style={{color: "#55769A"}}>
         <Typography variant="h2"style={{color:"#EEB868"}}>My Muslim Pride</Typography>

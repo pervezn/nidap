@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import './App.css';
-import { Paper, Image, Avatar, Typography, Box, Grid, GridListTile, GridList, Button, Card, CardMedia } from '@material-ui/core';
+import { Paper, Typography, Button, } from '@material-ui/core';
 // import { borders } from '@material-ui/system';
 import { makeStyles } from '@material-ui/styles';
-import { typeAlias } from '@babel/types';
-import {Route, Link} from 'react-router-dom';
+// import { typeAlias } from '@babel/types';
+// import {Route, Link} from 'react-router-dom';
  
 const defaultProps = {
  style: { width: '10rem', height: '10rem' },

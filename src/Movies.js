@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import './App.css';
-import { makeStyles } from '@material-ui/styles';
-import { Paper, Image, Avatar, Typography, Box, Grid, GridListTile, GridList, Button, Card, CardMedia } from '@material-ui/core';
-import {Route, Link} from 'react-router-dom';
+// import { makeStyles } from '@material-ui/styles';
+// import { Paper, Image, Avatar, Typography, Box, Grid, GridListTile, GridList, Button, Card, CardMedia } from '@material-ui/core';
+// import {Route, Link} from 'react-router-dom';
 import "../node_modules/video-react/dist/video-react.css";
 import  firebase from 'firebase/app';
 import 'firebase/firestore';
@@ -26,40 +26,40 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-const db = firebase.database().ref();
-var storage = firebase.storage();
-var storageRef = storage.ref();
+// const db = firebase.database().ref();
+// var storage = firebase.storage();
+// var storageRef = storage.ref();
 
 
-const useStyles = makeStyles({
-    avatar1: {
-        width: 100,
-        height: 100,
-        marginTop: "1vw",
-        marginLeft: "auto",
-        marginRight:"auto"
-    },
-    paper1:{
-        width: "20vw",
-        height: "200px",
-        position: "fixed",
-    },
-    paper2:{
-        width: "60vw",
-        height: "100%",
-        marginLeft: "20vw",
-    },
-    button1: {
-        display: "block",
-        marginLeft: "5vw",
-    }
+// const useStyles = makeStyles({
+//     avatar1: {
+//         width: 100,
+//         height: 100,
+//         marginTop: "1vw",
+//         marginLeft: "auto",
+//         marginRight:"auto"
+//     },
+//     paper1:{
+//         width: "20vw",
+//         height: "200px",
+//         position: "fixed",
+//     },
+//     paper2:{
+//         width: "60vw",
+//         height: "100%",
+//         marginLeft: "20vw",
+//     },
+//     button1: {
+//         display: "block",
+//         marginLeft: "5vw",
+//     }
 
-})
+// })
 
 
 
 const Movies = ()  => {
-    const classes = useStyles();
+    // const classes = useStyles();
     const [DL, setDL] = useState(null);
     const [seattle, setSeattle] = useState(null);
     const [summer, setSummer] = useState(null)

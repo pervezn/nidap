@@ -1,10 +1,10 @@
-import React, { useEffect, useState }  from 'react';
+import React, {  useState }  from 'react';
 
 // import ReactDOM from 'react-dom';
 import './App.css';
 import { makeStyles } from '@material-ui/styles';
 import { Paper, Avatar, Typography, Button, } from '@material-ui/core';
-import {Route, Link} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 // import {useSpring, animated, useTransition} from 'react-spring'
 // import paper from "paper";
 // import view from "paper";
@@ -44,7 +44,7 @@ const useStyles = makeStyles({
   
 })
 
-{document.title = "Nida Pervez"}
+document.title = "Nida Pervez"
 
 
 const ToProjects = ({state}) => {
@@ -61,7 +61,7 @@ const ToProjects = ({state}) => {
                                                                     data: "Projects"// your data array of objects
       }}>
 
-        <img src={"../Pictures/ProjectIcon.png"} style={{width:"50%"}}/>
+        <img src={"../Pictures/ProjectIcon.png"} alt="Projects" style={{width:"50%"}}/>
         <Typography>Projects</Typography>
       </Link>
     </Button>
@@ -76,7 +76,7 @@ const ToAbout = ({state}) => {
                                                                     pathname: "/Default",
                                                                     data: "About" // your data array of objects
                                                                   }}>
-        <img src={"../Pictures/AboutMeIcon.png"} style={{width:"40%"}}/>
+        <img src={"../Pictures/AboutMeIcon.png"} alt="About" style={{width:"40%"}}/>
         <Typography>About</Typography>
       </Link>
     </Button>
@@ -91,7 +91,7 @@ const ToResume = ({state}) => {
                                                                     pathname: "/Default",
                                                                     data: "Resume" // your data array of objects
                                                                   }}>
-        <img src={"../Pictures/ResumeIcon.png"} style={{width:"30%"}}/>
+        <img src={"../Pictures/ResumeIcon.png"} alt="Resume" style={{width:"30%"}}/>
         <Typography>Resume</Typography>
       </Link>
     </Button>
@@ -106,7 +106,7 @@ const ToMovies = ({state}) => {
                                                                     pathname: "/Default",
                                                                     data: "Movies" // your data array of objects
                                                                   }}>
-        <img src={"../Pictures/MoviesIcon.png"} style={{width:"40%"}}/>
+        <img src={"../Pictures/MoviesIcon.png"} alt="Movies" style={{width:"40%"}}/>
           <Typography>Movies</Typography>
         </Link>
     </Button>
@@ -121,7 +121,7 @@ const ToPhotos = ({state}) => {
                                                                     pathname: "/Default",
                                                                     data: "Photos" // your data array of objects
                                                                   }}>
-          <img src={"../Pictures/PhotosIcon.png"} style={{width:"50%"}}/>
+          <img src={"../Pictures/PhotosIcon.png"} alt="Photos" style={{width:"50%"}}/>
           <Typography>Photos</Typography>
           </Link>
         </Button>
@@ -136,7 +136,7 @@ const ToWriting = ({state}) => {
                                                                     pathname: "/Default",
                                                                     data: "Writing" // your data array of objects
                                                                   }}>
-      <img src={"../Pictures/WritingIcon.png"} style={{width:"30%"}}/>
+      <img src={"../Pictures/WritingIcon.png"} alt="Writing" style={{width:"30%"}}/>
       <Typography>Writing</Typography>
       </Link>
   </Button>
@@ -151,7 +151,7 @@ const ToTravel = ({state}) => {
                                                                     pathname: "/Default",
                                                                     data: "Travel" // your data array of objects
                                                                   }}>
-        <img src={"../Pictures/TravelIcon.png"} style={{width:"40%"}}/>
+        <img src={"../Pictures/TravelIcon.png"} alt="Travel" style={{width:"40%"}}/>
         <Typography>Travel</Typography>
       </Link>
     </Button>
@@ -161,7 +161,7 @@ const ToTravel = ({state}) => {
 const Home = ()  => {
    const classes = useStyles();
    const [currPage, setCurrPage] = useState();
-   {console.log("In Home: currPage is: " + currPage)}
+  //  {console.log("In Home: currPage is: " + currPage)}
   //  const [isToggled, setToggle] = useState(false);
   //  const fade = useSpring({from: { opacity: 0 }, opacity: 1})
   //  const fly = useSpring({
@@ -177,13 +177,12 @@ const Home = ()  => {
            <Avatar alt="Nida P" src="../Pictures/nidpic.JPG" className={classes.avatar1} />
            <Typography variant="body1" style={{width: "30vw", marginLeft: "auto", marginRight:"auto", color: "#EEB868", marginTop: "5vh", textAlign: "center"}}>Hey friends! My name’s Nida Pervez. I’m currently wrapping up my final year at Northwestern University, studying Computer Science and Chinese. Check out my past projects, internships, and creative ventures! I hope to connect with you at some level :)</Typography>
        </Paper>
-      
+       {/* <Balloon/> */}
        <div style={{display: "inline-box", marginTop: "15vh", width: "100%",}}>
         <ToProjects state={{currPage, setCurrPage}}/>
         <ToAbout state={{currPage, setCurrPage}}/>
         <ToResume state={{currPage, setCurrPage}}/>
        </div>
-       <Balloon/>
        <div style={{display: "inline-box", marginTop: "7vh", width: "100%"}}>
         <ToMovies state={{currPage, setCurrPage}}/>
         <ToPhotos state={{currPage, setCurrPage}}/>
@@ -192,6 +191,7 @@ const Home = ()  => {
        <div style={{display: "inline-box", marginTop: "3vh", width: "100%", marginBottom: "7vh"}}> 
         <ToTravel state={{currPage, setCurrPage}}/>
        </div> 
+    
      </div>
     
    );

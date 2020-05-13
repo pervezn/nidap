@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import './App.css';
-import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import { Paper, Image, Theme, Avatar, Typography, Box, Grid, GridListTile, GridList, Button, Card, CardMedia } from '@material-ui/core';
-import {Route, Link} from 'react-router-dom';
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { Paper, Typography, Button,} from '@material-ui/core';
+// import {Route, Link} from 'react-router-dom';
  
 const useStyles = makeStyles({
    avatar1: {

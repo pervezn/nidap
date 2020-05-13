@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import './App.css';
 import { makeStyles } from '@material-ui/styles';
-import { Paper, Image, Avatar, Typography, Box, Grid, GridListTile, GridList, Button, Card, CardMedia } from '@material-ui/core';
-import {Route, Link} from 'react-router-dom';
+import { Typography,} from '@material-ui/core';
+import {Link} from 'react-router-dom';
 import { PDFExport } from '@progress/kendo-react-pdf';
  
 const useStyles = makeStyles({

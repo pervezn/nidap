@@ -1,19 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import paper from "paper";
-import view from "paper";
-import Raster from "paper";
 import styled from 'styled-components';
 
 import { balloon } from './KeyFrames';
 
 export const Box = styled.div`
   display: inline-block;
-  background-image: "../Pictures/balloon1.png";
+  background-image: ".../Pictures/balloon1.png";
   background: pink;
   width: 200px;
   height: 200px;
   position: relative;
-  animation: ${balloon} 12s linear 0s infinite forwards;
+  animation: ${balloon} 7s linear 0s infinite forwards;
 `
  
 export default Box;

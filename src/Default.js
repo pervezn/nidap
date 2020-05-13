@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import { makeStyles } from '@material-ui/styles';
 import { Paper, Image, Avatar, Typography, Box, Grid, GridListTile, GridList, Button, Card, CardMedia } from '@material-ui/core';
-import {Route, Link, useLocation} from 'react-router-dom';
+import { BrowserRouter as Router, useLocation, Switch, Route, Link } from "react-router-dom";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 import "../node_modules/video-react/dist/video-react.css";
 import 'firebase/firestore';
@@ -23,6 +23,7 @@ import Article2 from "./Articles/Article2"
 import FactFlow from "./FactFlow"
 import TropeTracker from "./TropeTracker"
 import Internships from "./Internships"
+import usePersistedState from './usePersistedState';
 
 
 const menuItems = { Pr: "Projects", M: "Movies", P: "Photos", W: "Writing", T: "Travel"}
@@ -130,7 +131,7 @@ const MenuSelector = ({ state }) => {
     return (
     <MuiThemeProvider theme={colortheme}>
       <Button className={classes.button1} color="primary">
-        <Link style={{textDecoration: "none", color: "#55769A" }}exact to="/" >
+        <Link style={{textDecoration: "none", color: "#55769A" }}exact="true" to="/" >
           Home
         </Link>
       </Button>
@@ -141,7 +142,11 @@ const MenuSelector = ({ state }) => {
           className={classes.button1}
           color={ buttonColor(value === state.currPage) }
           onClick={ () => state.setCurrPage(value) }>
+          {/* {console.log("before link")} */}
+            {/* <Link style={{textDecoration: "none", color: "#55769A" }} to={`/${value}`} > */}
           { value }
+          {/* console.log(`/ {value}`); */}
+          {/* </Link> */}
         </Button>
         )
       }
@@ -199,10 +204,31 @@ const BodySelector = ({currState}) => {
   )
 }
 
+const BodySelector2 = ({currState}) => {
+  return (
+    <Router>
+      <Switch>
+        <Route
+          exact
+          path="/Projects"
+          component={() => {
+            console.log("HEREEEEE")
+            return (
+              <Projects state={currState}/>
+            )
+          }}
+        />
+      </Switch>
+    </Router>
+  )
+}
+
 const Default = ({state})  => {
     const classes = useStyles();
     const location = useLocation();
-    const [currPage, setCurrPage] = useState(location.data);
+    // const [currPage, setCurrPage] = useState();
+    const [currPage, setCurrPage] = useState(location.data); 
+    // const [currPage, setCurrPage] = usePersistedState('currPage', location.data); 
     // const [currPage, setCurrPage] = useState(location ? location.data : );
     {console.log("In Home: location.state.data is: " + location.data)}
     console.log(location)
@@ -220,6 +246,7 @@ const Default = ({state})  => {
                 <Paper elevation={0} className={classes.paper2}>
                   {console.log("menu is: " + currPage)}
                   <BodySelector currState={{currPage, setCurrPage}} />
+                  {/* <BodySelector2 currState={{currPage, setCurrPage}} /> */}
                 </Paper>
             </Grid>
             <Grid item>

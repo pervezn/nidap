@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import './App.css';
-import {Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from './Home';
 import Movies from './Movies';
 import Photos from './Photos';
@@ -29,22 +29,25 @@ const App = ()  => {
 
  return (
    <div className="App">
-     <Route exact path="/" component={Home} />
-     <Route exact path="/home" component={Home} />
-     <Route exact path="/about" component={About} />
-     <Route exact path="/projects" component={Projects} />
-     <Route exact path="/projects/factflow" component={FactFlow} />
-     <Route exact path="/projects/tropetracker" component={TropeTracker} />
-     <Route exact path="/projects/internships" component={Internships} />
-     <Route exact path="/Movies" component={Movies} />
-     <Route exact path="/Photos" component={Photos} />
-     <Route exact path="/Writing" component={Writing} />
-     <Route exact path="/Travel" component={Travel} />
-     <Route exact path="/Resume" component={Resume} />
-     <Route exact path="/Default" component={Default} />
-     <Route exact path="/Writing/MuslimAmericanCulture" component={Article1} />
-     <Route exact path="/Writing/MyMuslimPride" component={Article2} />
-
+     <Router>
+       <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/Default/about" component={About} />
+          <Route exact path="/Default/projects" component={Projects} />
+          <Route exact path="/Default/projects/factflow" component={FactFlow} />
+          <Route exact path="/Default/projects/tropetracker" component={TropeTracker} />
+          <Route exact path="/Default/projects/internships" component={Internships} />
+          <Route exact path="/Default/Movies" component={Movies} />
+          <Route exact path="/Default/Photos" component={Photos} />
+          <Route exact path="/Default/Writing" component={Writing} />
+          <Route exact path="/Default/Travel" component={Travel} />
+          <Route exact path="/Default/Resume" component={Resume} />
+          <Route exact path="/Default" component={Default} />
+          <Route exact path="/Default/Writing/MuslimAmericanCulture" component={Article1} />
+          <Route exact path="/Default/Writing/MyMuslimPride" component={Article2} />
+      </Switch>
+     </Router>
      
    </div>
   
